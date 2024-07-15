@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<patientReport>
+	<patient>
+		<birthDate>1938-02-24T00:00:00+01:00
+		</birthDate>
+		<center>Pott, Dirk</center>
+		<csiParticipant>true</csiParticipant>
+		<currentDose>780</currentDose>
+		<id>4</id>
+		<insuranceId>2</insuranceId>
+		<lastDocumentation>2010-01-28T00:00:00+01:00
+		</lastDocumentation>
+		<processed>false</processed>
+		<randomNumber>987004</randomNumber>
+		<startDose>10</startDose>
+		<therapyConform>true</therapyConform>
+		<treatmentEnd>false</treatmentEnd>
+		<weight>78.0</weight>
+	</patient>
+	<cycles>
+		<combinations>
+			<applicationDate>25.01.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<combinations>
+			<applicationDate>01.02.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<combinations>
+			<applicationDate>08.02.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<combinations>
+			<applicationDate>15.02.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>BREAK</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<medications>
+			<applicationDate>25.01.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>BEVACIZUMAB</parameter>
+			<type>MAINSUBSTANCE</type>
+			<value>780</value>
+		</medications>
+		<medications>
+			<applicationDate>08.02.2010</applicationDate>
+			<cycle>1</cycle>
+			<parameter>BEVACIZUMAB</parameter>
+			<type>MAINSUBSTANCE</type>
+		</medications>
+		<number>1</number>
+	</cycles>
+	<insurance>
+		<id>2</id>
+		<name>AOK Baden-Württemberg</name>
+	</insurance>
+</patientReport>

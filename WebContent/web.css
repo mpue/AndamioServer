@@ -1,0 +1,734 @@
+body         {
+    background-attachment:fixed;
+    background-color:#F68B1E;
+    margin-left:0px;
+    margin-top:0px;
+    margin-width:0px;
+    margin-height:0px;
+}
+hr           {
+    margin-left:0px;
+    margin-top:0px;
+    margin-width:0px;
+    margin-height:0px;
+}
+a            {
+    FONT-FAMILY: Verdana, Helvetica;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+
+}
+p {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE:11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: justify;
+    color:#000000;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+
+a:link    {color:#000000; text-decoration:none;font-family: Verdana;font-size: 10pt;}
+a:visited {color:#000000; text-decoration:none;font-family: Verdana;font-size: 10pt;}
+a:active  {color:#000000; text-decoration:none;font-family: Verdana;font-size: 10pt;}
+a:hover   {color:#000000; text-decoration:underline;font-family: Verdana;font-size: 10pt;}
+
+span.excel {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+span.csv {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+span.xml {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+span.pdf {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+span.pagebanner 	  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+span.pagelinks 	  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    color : #000000;
+    background-color: #DDDDDD;
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+
+}
+
+
+
+.fett        {
+    FONT-FAMILY: Verdana, Helvetica;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold
+}
+.text1       {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: justify
+}
+.text2       {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: justify
+}
+p.absatz1    {
+    color:#000000;
+    text-align:justify;
+    width:95%;
+    font-size:10pt;
+    line-height:12pt;
+    font-style:normal;
+    font-weight:normal;
+    font-family:Helvetica, Verdana;
+    letter-spacing:0.1mm;
+    word-spacing:0.2mm;
+    margin-left:0px;
+}
+p.absatz2    {
+    color:#000000;
+    text-align:justify;
+    width:50%;
+    font-size:12pt;
+    font-weight:bold;
+    font-style:normal;
+    line-height:14pt;
+    font-family:Helvetica, Verdana;
+    letter-spacing:0.1mm;
+    word-spacing:0.8mm;
+}
+p.absatz3    {
+    color:#000000;
+    text-align:center;
+    width:100%;
+    font-size:15pt;
+    font-weight:bold;
+    font-style:normal;
+    line-height:16pt;
+    font-family:Helvetica, Verdana;
+    letter-spacing:0.1mm;
+    word-spacing:0.8mm;
+    margin-left:30px;
+}
+
+p.absatz4    {
+    color:#000000;
+    text-align:center;
+    width:97%;
+    font-size:13pt;
+    line-height:15pt;
+    font-style:normal;
+    font-family:Helvetica, Verdana;
+    font-weight:bold;
+    letter-spacing:0.1mm;
+    word-spacing:0.2mm;
+    margin-left:30px;
+}             
+
+p.absatz5    {
+    color:#000000;
+    text-align:left;
+    width:97%;
+    font-size:15pt;
+    line-height:17pt;
+    font-style:normal;
+    font-family:Helvetica, Verdana;
+    font-weight:bold;
+    letter-spacing:0.1mm;
+    word-spacing:0.2mm;
+    margin-left:30px;
+}             
+p.anschrift  {
+    color:#000000;
+    text-align:center;
+    width:100%;
+    font-size:10pt;
+    font-weight:bold;
+    font-style:normal;
+    line-height:12pt;
+    font-family:Helvetica, Verdana;
+    letter-spacing:1mm;
+    word-spacing:0.2mm;
+}
+
+p.toptext  {
+    color:#000000;
+    text-align:justify;
+    width:95%;
+    font-size:11pt;
+    font-weight:bold;
+    line-height:13pt;
+    font-family:Helvetica, Verdana;
+    letter-spacing:0.1mm;
+    word-spacing:0.2mm;
+}
+
+table.A4 { width:180mm; height:287mm;margin-left:15mm}
+
+
+table.Product {
+    width : 90%;
+    vertical-align : middle;
+    border : 1px inset #000000;
+    border-spacing: 2px;
+    border-width:   1px;
+    background-color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+
+p.termine {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+table.standardT {
+    width:100%;
+    vertical-align : middle;
+}
+table.Mainpage{
+    width:800px;
+    vertical-align : middle;
+    border-style : solid;
+    border-spacing: 0px;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    background-color : #EEEEEE;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0px;
+}
+
+table.HeaderAndFooter{
+    width:800px;
+    vertical-align : middle;
+    border-style : solid;
+    border-spacing: 0px;
+    border-width: 1px;
+    border-top: none;
+    border-bottom: none;
+    background-color : #EEEEEE;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0px;
+}
+
+
+table.menu {
+    background-color : #FFFFFF;
+    font-family: Verdana;
+
+}
+
+td.contentheading {
+    background-color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 15pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+}
+
+table.standardInner {
+    vertical-align : middle;
+    width       : 100%;
+    border-spacing: 2px;
+    border-width:   1px;
+    background-color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+
+table.TableHeader {
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+    width : 100%;
+    vertical-align : middle;
+    border-spacing: 2px;
+    border-width:   1px;
+    background-color : #DDDDDD;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+tr.Header {
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+    width : 100%;
+    vertical-align : middle;
+    border-spacing: 1px;
+    border-width:   1px;
+    background-color : #DDDDDD;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: bold;
+
+
+}
+tr.odd {
+    background-color : #EEEEEE;
+
+}
+tr.even        {
+    background-color : #FFFFFF;
+}
+th.sortable        {
+    border-width: thin;
+    border-style: solid;
+    border-color: #222222;
+    color: #000000;
+    background-color : #DDDDDD;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+}					
+
+table.Title    {
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    width : 100%;
+    height : 35px;
+    vertical-align : middle;
+    border-spacing: 15px;
+    border-width:   1px;
+    background-image : url(images/darkblue/decorations/darkblue.png);
+    color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+td.error       {
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    vertical-align : middle;
+    border-spacing: 15px;
+    border-width:   1px;
+    background-color: #EEEEFF;
+    color : #0000BB;
+    width:90%;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+
+td.menuitem {
+    border-style:solid;
+    border-width:1px;
+    border-color:#000000;
+    border-left: none;
+    border-right : none;
+    border-spacing : 5px;
+    background-color:#FFFFFF;
+    text-align: center;
+
+
+}
+
+td.menuitem2 {
+    border-style:solid;
+    border-width:1px;
+    border-color:#000000;
+    border-left : none;
+    border-right : none;
+    border-spacing : 0px;
+    background-color:#CCCCDD;
+
+}
+
+table.PreviewTitle    {
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    width : 95%;
+    height : 35px;
+    vertical-align : middle;
+    border-spacing: 2px;
+    border-width:   1px;
+    background-color : #5F8BC7;
+    color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+
+table.produktInfo {
+    width : 100%;
+    vertical-align : middle;
+    border-spacing: 5px;
+    border-width:   1px;
+    background-color : #FFFFFF;
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+
+
+}
+
+
+table.text1  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+
+table.text2  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+
+td.rg_title  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 41pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: center;
+    letter-spacing:0.1mm;
+    word-spacing:0.6mm;
+    color:#000000;
+}
+th.c_title  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 14pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    letter-spacing:0.1mm;
+    word-spacing:0.6mm;
+    color:#000000;
+}
+
+td.rg_standard  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: justify;
+    color:#000000;
+    LETTER-SPACING:0.1mm;
+}
+
+td.rg_anschrift  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+td.rg_anschrift_r  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: right;
+    color:#000000;
+}
+
+td.rg_anschrift_rbig  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: right;
+    color:#000000;
+}
+
+
+td.rg_kompakt  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 13pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: right;
+    LETTER-SPACING: 0.3mm;
+    color:#000000;
+}
+
+td.rg_brief  {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: center;
+    color:#000000;
+}
+
+td.hinweis {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 13pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    LETTER-SPACING: 0.3mm;
+    color:#000000;
+}
+td.desc_left {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    color:#FFFFFF;
+}
+td.desc_center {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 16pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    color:#000000;
+}
+td.desc_right {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: right;
+    color:#000000;
+}
+
+td.text_left {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: justify;
+    color:#000000;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+
+td.text_center_mini {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    color:#000000;
+}
+td.text_left_mini {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+
+td.text_center_big {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    color:#000080;
+}
+
+td.text_left_big {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 12pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+
+
+td.text_center {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: center;
+    color:#000080;
+    margin-left:5px;
+    margin-right:5px;
+}
+td.text_right {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: right;
+    color:#000000;
+}
+td.text_right_b {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: right;
+    color:#000000;
+}
+
+
+ul.features  {
+    MARGIN-LEFT: 0px;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    color:#000000;
+    list-style-position:outside;
+}
+
+textarea.text_left {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 11pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    color:#000000;
+}
+
+.bs1 {
+    font-family: Verdana;
+    font-size:11px;
+    font-style:normal;
+    background-color : #222244;
+    color :#FFFFFF;
+    border: 1px solid #FFFFFF;
+}             
+
+input.bs1 {
+    font-family: Verdana;
+    font-size:11px;
+    font-style:normal;
+    background-color : #222244;
+    color :#FFFFFF;
+    border: 1px solid #FFFFFF;
+}             
+
+
+.bs2 {
+    font-family: Verdana;
+    font-size:11px;
+    font-style:normal;
+    background-color : #FFFFFF;
+    border: 1px solid #000000;
+}             
+
+.standard {
+    font-family: Verdana;
+    font-size:11px;
+    font-style:normal;
+    font-weight: bold;
+    background-color : #FFFFFF;
+    border: 2px outset #202020;
+}             
+
+.inTable {
+    font-family: Verdana;
+    font-size:10px;
+    font-style:normal;
+    background-color : #D0D0E0;
+}
+
+
+             

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Template" table="TEMPLATE">
+		
+		<id name="id" column="TEMPLATE_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" column="NAME"/>		
+		<property name="description" type="text" column="DESCRIPTION"/>
+		<property name="galleryType" type="org.pmedv.pojos.GalleryEnumUserType" not-null="true" column="GALLERYTYPE"/>
+		<property name="tableStyleClass"  column="TABLESTYLE"/>
+		<property name="tableDataStyleClass"  column="DATASTYLE"/>
+		<property name="tableRowStyleClass"  column="ROWSTYLE"/>
+		<property name="placeInDiv" column="PLACEINDIV"/>
+		<property name="divStyleClass" column="DIVSTYLE"/>
+		<property name="html" type="text" column="HTML"/>
+		<property name="css" type="text" column="CSS"/>
+		
+	</class>
+	
+</hibernate-mapping>

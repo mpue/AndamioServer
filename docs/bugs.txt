@@ -1,0 +1,3 @@
+Bugdatabase is now under:
+
+http://bugs.weberknechtcms.org/

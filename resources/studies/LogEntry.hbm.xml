@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.iomedico.dataaccess.objects.LogEntry" table="LOGENTRY">
+		
+		<id name="id" column="ENTRY_ID" >
+			<generator class="increment" />
+		</id>
+
+		<property name="username" column="USERNAME"/>
+		<property name="entryDate" type="timestamp" column="ENTRYDATE"/>
+		<property name="action" column="ACTION"/>
+
+	</class>
+	
+</hibernate-mapping>

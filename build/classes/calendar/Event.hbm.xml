@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.calendar.Event" table="EVENT">
+		
+		<id name="id" column="EVENT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="title" column="TITLE" />
+		<property name="location" column="LOCATION"/>
+		<property name="description" column="DESCRIPTION"/>
+		<property name="username" column="USERNAME"/>
+		<property name="selectedDate" column="SELECTEDDATE" type="timestamp"/>		
+		
+		<set name="possibleDates"
+			 lazy="false" 
+			 inverse="false"
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="EVENT_ID"/>
+            <one-to-many class="org.pmedv.pojos.calendar.DateBean"/>
+        </set>
+
+		<set name="participants"
+			 lazy="false" 
+			 inverse="false"
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="EVENT_ID"/>
+            <one-to-many class="org.pmedv.pojos.calendar.Participant"/>
+        </set>
+		
+	</class>
+	
+</hibernate-mapping>

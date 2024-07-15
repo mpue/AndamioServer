@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Revision" table="REVISION">
+		
+		<id name="id" column="REVISION_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="contenttext" column="CONTENTTEXT" type="text" />
+		<property name="lastmodified" type="timestamp" column="LASTMODIFIED" />				
+		<property name="author"	column="AUTHOR"/>
+		<property name="published" column="PUBLISHED"/>
+		
+		<many-to-one name="content" column="CONTENT_ID" not-null="true"/>
+		
+	</class>
+	
+</hibernate-mapping>

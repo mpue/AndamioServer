@@ -1,0 +1,15 @@
+ListProcesses.do,menu.processes,processes.png,1
+ListContents.do,menu.contentmanager,contents.png,2
+ListMenus.do,menu.menumanager,menus.png,3
+ListContacts.do,menu.contacts,contacts.png,4
+ListGalleries.do,menu.gallerymanager,galeries.png,7
+ListDirectories.do?do=enter&dir=,menu.filemanager,disks.png,8
+ListStatistics.do,menu.statistics,chart.png,11
+ListUsers.do,menu.user,users.png,12
+ListUsergroups.do,menu.usergroups,usergroups.png,13
+ShowConfig.do?do=edit,menu.configuration,config.png,14
+ListNodes.do,menu.nodes,node.png,15
+ListForums.do,menu.forums,document_cup.png,16
+ListPlugins.do,menu.plugins,plug.png,17
+ListDownloads.do,menu.downloads,download.png,18
+ListLanguages.do,menu.languages,languages.png,19

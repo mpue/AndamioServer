@@ -1,0 +1,32 @@
+Ajax file manager is an open source tinymce file manager plugin for tinymce editor,
+ which fully empowered by AJAX.
+
+Features of Ajax File Manager
+1. fully employ AJAX to function file management
+2. faster to load and avoid reloading the whole window.
+3. multi-language supported (utf-8)
+4. access control supported
+5. fully customizable, create your own style css
+6. 
+Simple follow this steps to get your ajax file manager plugin work with lastest tinymce Editor
+1. create a folder for your website, e.g. C:/Inetpub/wwwroot/ajaxfilemanager/ 
+2. download the lastest tinymce editor file and unzip it , now you should have 3 folders - docs, example, jascripts respecitively, 
+3. then copy the whole folder of tiny_mce under jascripts folder, to C:/Inetpub/wwwroot/ajaxfilemanager/
+4. download the lastest ajax file manager file and unzip it, you should see ajaxfilemanager.php, ajaxfilemanager and uploaded folder
+5. move the ajaxfilemanager folder to C:/Inetpub/wwwroot/ajaxfilemanager/tiny_mce/plugins/
+6. move the test.php to C:/Inetpub/wwwroot/ajaxfilemanager/
+7. move the uploaded folder to C:/Inetpub/wwwroot/ajaxfilemanager/
+7. you should have the next directory structure ..
+C:/Inetpub/wwwroot/ajaxfilemanager/
+	|___ tiny_mce
+	|___ uploaded
+	|___ test.php
+8. now visit the test.php via http://localhost/ajaxfilemanger/test.php
+
+If you have any special requirements and want to place those folder to anywhere else, 
+1. please change the location of tiny_mce.js (line 4) and ajaxfilemangerurl (line 32) in test.php
+2. change the path of  CONFIG_SYS_DEFAULT_PATH AND CONFIG_SYS_ROOT_PATH Which  all files will be uploaded to.
+
+If you have security issue concern, you could turn the access control on 
+1. set CONFIG_ACCESS_CONTROL_MODE = 1
+2. Change the login details CONFIG_LOGIN_USERNAME AND CONFIG_LOGIN_PASSWORD

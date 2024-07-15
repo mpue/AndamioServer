@@ -1,0 +1,57 @@
+5.05.2009 (mpue) V3.0
+
+- Installation vereinfacht, die InstallationAction erzeugt nun auch das Schema selbst 
+  (WebContent/admin/install/schema.sql). hibernate.cfg.xml muss nun nicht mehr angepasst werden. (Nur MySQL)
+- ServerPath aus Konfiguration und allen Files entfernt, wird nun bei der Installation automatisch bestimmt
+- Konfigurationsdialog ausgemistet. Einstellungen, die fuer den Benutzer irrelevant sind, werden nur noch 
+  Ueber das configuration.properties file gelesen.
+- Validierung beim Anlegen eines Inhalts oder Plugins, es muessen nun alle Felder ausgefüllt werden.        
+- Es erscheint nun eine Meldung, wenn kein Knoten ausgewaehlt ist.  
+- TinyMCE skaliert nun besser und kann noch in der Groesse veraendert werden.
+- Startknoten wird nun wieder korrekt angesprungen
+- Bei der Installation werden nun auch die Ordner fuer Inhalte und Bilder erzeugt.
+- Nodes werden nun mit Datum im Dateinamen exportiert
+
+20.5.2009 V3.0
+- Refactoring von MainpageShowAction
+
+27.5.2009 V3.0
+- DAOs auf Spring umgestellt und diverse JSPs korrigiert alle binden nun die Datei "globals.jsp" ein und greifen
+nun auf die Db auf Singletons zu.
+
+29.9.2009 V3.0
+- neuer Spring Service FileService -> liefert alle Inhalte des Content Ordners mit Links an den AndamioManager
+- Nodes Export nun ueber JAXB, Import muss noch angepasst werden
+- LocalIP property endlich gegen den sprechenderen Namen LocalPath ausgetauscht
+ 
+30.9.2009 V3.01
+- Bugfixing Content Editor (web), Textfelder für Metainformationen lösen nun auch das Dirty Flag aus
+- Umstellung auf ExtJS 2.3, Anpassungen CookieProvider für Panelstate
+- Properties aus ApplicationContext ausgelagert -> application.properties
+- Export- und Import beinhalten nun auch den Inhalt des "Content" Ordners
+
+25.11.2009 V3.02
+- Content Editor Funktionen sind nun in einem gesonderten Menü enthalten
+- Standard Metatags könenn nun über das Menü "Funktionen" in den Inhalt eingefügt werden
+- Neue Sicherheitsabfrage, wenn im Content Editor nach Änderung des Inhalts auf "Hauptmenü" geklickt wird.
+- Fehler beseitigt : Ändern der Metainformationen löst das Dirty Flag nicht aus
+- Fehler beseitigt : Unterknoten eines gruppenbeschränkten Knotens konnten trotzdem geöffnet werden
+- Fehler beseitigt : bereits angelegte Knoten unterhalb der Wurzelebene konnten nicht geändert werden
+- Datenbankeinstellungen werden nur noch über das File application.properties festgelegt (entfällt für Installationsdialog)
+- Galerien können nun Bilder mit gleichen Namen enthalten, sofern sie sich in unterschiedllichen Galerien befinden.
+- Galeriebilder können nun Umlaute im Namen enthalten
+- Cleanup : Legacy Files entfernt (dojo, etc.)  
+  
+26.11.2009 V3.03
+- andamio-8 Vorschaufenster lässt sich jetzt skalieren.
+- andamio-7 Vorschau auf Kindknoten berücksichtigt jetzt den Pfad des Knotens.
+- andamio-6 Inhalte lassen sich nicht mehr bearbeiten und speichern, wenn kein Knoten gewählt ist	
+- andamio-6 Hauptknoten lässt sich nun nicht mehr selektieren
+- andamio-9 Vorschau wird deaktiviert, falls kein Inhalt selektiert ist.
+- Metatags Item wird deaktiviert wenn kein Inhalt selektiert ist
+- Menuitems für Tree Contextmenu eingeschränkt : Oberster Knoten kann nur noch aktualisiert werden
+ 
+27.11.2009 V3.03
+- Beginn mit der Reintegration des alten Forums
+- JavaScript Plugin erstellt, es kann nun auf die DAOs des CMS über die Java eigene JavaScript-Engine 
+  und das PlugIn zugegriffen werden.

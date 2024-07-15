@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.forums.Posting" table="POSTING">
+		
+		<id name="id" column="POSTING_ID">
+                <generator class="increment"/>
+        </id>
+			
+		<property name="title" column="TITLE"/>	
+		<property name="postingtext" type="text" column="POSTINGTEXT"/>	
+		<property name="date" type="timestamp" column="POSTING_DATE" />
+		<property name="lastChange" type="timestamp" column="POSTING_LASTCHANGE"/>
+		<property name="lastChangeBy" column="POSTING_LASTCHANGEBY"/>
+		<many-to-one name="thread" column="THREAD_ID" not-null="true"/>		
+		<many-to-one name="user"   column="USER_ID" not-null="true" lazy="false"/>	
+						 	   
+		<set name="attachments"
+			 lazy="false" 
+			 inverse="false" 
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="POSTING_ID"/>
+            <one-to-many class="org.pmedv.pojos.forums.Attachment"/>
+        </set>							 	   
+						 	      					
+	</class>
+	
+</hibernate-mapping>

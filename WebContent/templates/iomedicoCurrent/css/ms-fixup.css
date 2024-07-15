@@ -1,0 +1,11 @@
+@import url('menu.css');
+
+body {
+       margin: 4px;
+       font-family: arial, helvetica, sans;
+       font-size: 12px;
+       color: #000;
+       background: #39387b;
+}
+
+

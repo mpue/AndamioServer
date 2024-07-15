@@ -1,0 +1,45 @@
+Coding Guidelines (Stand 5.10.2007)
+
+1)Java Klassen
+
+- Jede Klasse muss einen Javadoc Header mit einer kurzen Klassenbeschreibung enthalten
+- Klassen, die mehr als 2000 Zeilen enthalten sollten sinnvoll dahingehend untersucht werden
+  ob man Sie ggf. in mehrere kleine Klassen unterteilt
+
+2) Methoden
+- Methodennamen werden stets klein geschrieben und haben als Namen ein die Funktion beschreibendes 
+  u.U. zusammengesetztes Verb. z.B. createUnprivilegedUser
+- Methoden die sinngemaess dasselbe tun, enthalten das gleiche Verb, legt beispielsweise die Methode
+  createUser einen Benutzer an, so kann eine Methode, die eine Gruppe anlegt nur createGroup und nicht
+  makeGroup heissen.
+- Methoden, die nicht aus einem Interface stammen, werden grundsaetzlich komplett dokumentiert
+
+3) Variablen, Objekte und Konstanten
+- Alle Variablen und Objektinstanzen werden klein, alle Konstanten komplett gross geschrieben
+  Beispiel : interestingValue, VERY_SPECIAL_KONSTANT
+
+4) Stil : Der Code sollte ausser seiner semantischen Korrektheit auch eine gewisse Aesthetik besitzen
+- Der Code sollte dem Zusammenhang nach in Bloecke gefasst sein, so dass man schnell zusammenhaengende
+  Codezeilen erfassen kann.
+- Die Initialisierung von Variablen und Objekten, sollte moeglichst zu Methodenbeginn erfolgen
+  Damit der Kontext besser erfasst werden kann.
+- Mehrzeilige Bloecke beginnen mit der geschweiften Klammer in der gleichen Zeile wie der Blockbeginn
+  Beispiel:
+  
+int doSomething() {
+
+	ObjectType1 object1 = new ObjectType1();
+	ObjectType2 object2 = new ObjectType2();
+	
+	for (int i=1;i < 100;i++) {
+		System.out.println(i);
+		System.out.println(i+1);
+	}
+	.
+	.
+	.
+}			
+
+- Zwischen Methodenkopf und erstem Statement gibt es fuer gewoehnlich eine Leerzeile
+   
+   

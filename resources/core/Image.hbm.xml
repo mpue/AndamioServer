@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true">
+
+	<class name="org.pmedv.pojos.Image" table="IMAGE">
+		
+		<id name="id" column="GIMAGE_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="description" type="text" column="DESCRIPTION" />
+		<property name="ranking" column="RANKING"/>
+		<property name="path" column="PATH" />	
+		<property name="name" column="NAME" />		
+		<property name="filename" column="FILENAME" />		
+		<property name="lastmodified" column="LASTMODIFIED" />
+		
+		<many-to-one name="gallery" column="GALLERY_ID" not-null="true"/>
+		
+		<set name="userComments"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="delete">		
+            <key column="GIMAGE_ID"/>
+            <one-to-many class="org.pmedv.pojos.UserComment"/>
+        </set>
+		
+	</class>
+	
+</hibernate-mapping>

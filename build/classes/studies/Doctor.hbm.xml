@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.iomedico.dataaccess.objects.Doctor" table="DOCTOR">
+		
+		<id name="id" column="DOCTOR_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="firstname" column="FIRSTNAME"/>
+		<property name="lastname" column="LASTNAME"/>
+		<property name="login" column="LOGIN"/>
+		<property name="type" column="TYPE"/>
+		<property name="participant" column="PARTICIPANT"/>
+
+		<set name="patients"
+			 lazy="false" 
+			 inverse="true" 			 
+			 sort="natural"
+			 cascade="all-delete-orphan">		
+            <key column="DOCTOR_ID"/>
+            <one-to-many class="com.iomedico.dataaccess.objects.Patient"/>           
+        </set>
+
+	</class>
+	
+</hibernate-mapping>

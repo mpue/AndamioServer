@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Node" table="NODE">
+		
+		<id name="id" unsaved-value="0">
+			<generator class="native"/>
+        </id>
+			
+		<property name="name" column="NAME"/>	
+		<property name="displayName" column="DISPLAYNAME"/>
+		<property name="position" column="NODEPOSITION"/>	
+		<property name="type" column="TYPE"/>
+		<property name="image" column="IMAGE"/>
+		<property name="pluginid" column="PLUGINID"/>	
+		<property name="pluginparams" type="text" column="PLUGINPARAMS"/>		
+		<property name="linkurl" column="LINKURL"/>												
+		<property name="firstchild" column="FIRSTCHILD"/>
+		<property name="exportable" column="EXPORTABLE"/>
+		<property name="rel" column="REL"/>		
+		<property name="targetName" column="TARGETNAME"/>
+				
+		<set name="children" lazy="false" inverse="true" cascade="all" sort="org.pmedv.comparator.NodeComparator">
+           <key column="NODE_ID"/>
+           <one-to-many class="org.pmedv.pojos.Node"/>
+      	</set>     
+
+      	<many-to-one name="parent" class="org.pmedv.pojos.Node" column="NODE_ID" lazy="false"/>
+		<many-to-one name="content" class="org.pmedv.pojos.Content" column="INHALT_ID" lazy="false" fetch="join" outer-join="auto" />     
+
+		<set name="groups" 
+			 table="link_node_groups" 
+			 lazy="false">
+			<key column="NODE_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Usergroup"
+				column="GROUP_ID"/>
+		</set>			 	      
+
+	</class>
+	
+</hibernate-mapping>

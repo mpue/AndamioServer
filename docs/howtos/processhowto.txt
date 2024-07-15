@@ -1,0 +1,115 @@
+Einen Prozess innerhalb des CMS anlegen
+
+1) Pojo erstellen mit allen notwendigen Attributen
+
+Das Pojo ist ein "Plain Old Java Object" mit privaten Attributen, die über öffentliche getter und setter
+angesprochen werden. Das Pojo muss ein Plichtfeld vom Typ Long und dem Namen "id" enthalten und einen öffentlichen
+leeren Konstruktor aufweisen.
+
+2) Entsprechendes Mapping im resources Ordner mit dem Namen Klassenname.hbm.xml anlegen
+   und in der hibernate.cfg.xml anmelden
+   
+   Die Spaltennamen müssen nicht zwangsläufig dieselben der Attribute sein, die Attributnamen müssen allerdings
+   den Attributen im Java Objet entsprechen.
+
+3)  Form Beans erzeugen
+
+	3.1) Form erzeugen, erbt vom Typ AbtractActionForm 
+		 Diese Klasse muss die Methoden reset und validate implementieren (reset parameter beachten!!!)
+	3.2) ShowForm erzeugen
+		 Privates Member vom Typ 
+		 Getter und Setter greifen indirekt auf die Attribute zu
+	3.3) ListForm erzeugen	 
+		 Enthält Liste vom Objekt mit Typ
+		 
+	Nach diesen Schritten müssen also, wenn das Objekt "Component" heisst, folgende Forms existieren:
+	
+	ComponentForm.java
+	ComponentShowForm.java
+	ComponentListForm.java
+	
+	Diese werden wie folgt in der struts-config.xml bekanntgegeben:
+	
+	 <form-bean
+		name="ComponentForm"
+		type="org.pmedv.forms.ComponentForm"/>  
+
+	 <form-bean 
+	 	name="ComponentListForm" 
+	 	type="org.pmedv.forms.ComponentListForm" />	
+	 	
+	 <form-bean 
+		name="ComponentShowForm" 
+		type="org.pmedv.forms.ComponentShowForm" />
+
+4) Form Actions anlegen
+
+	Es muss zu jeder Form eine entsprechende Action Klasse implementiert werden.
+	Also am Beipiel oben müssen 3 Klassen erzeugt werden:
+	
+	ComponentAction.java
+	ComponentShowAction.java
+	ComponentListAction.java
+	
+	Die Klasse ComponentShowAction muss von AbstractPermissiveDispatchAction erben und
+	im Konstruktor muss mit setName der Name des Prozesses gesetzt werden, damit die Gruppen-
+	zuordnungen wirksam werden können.
+	
+	nun müssen die Actions in der struts-config.xml angemeldet werden:
+	
+		<action
+			path="/admin/CreateComponent"
+		    type="org.pmedv.actions.ComponentAction"
+		    input="/admin/createComponent.jsp"		    
+		    name="ComponentForm"
+		    scope="request"
+		    validate="true">
+		    <forward name="createComponentSuccess" path="/admin/createComponentSuccess.jsp"/>
+		</action>
+
+		<action
+			 path="/admin/ListComponent"
+			 attribute="ComponentListForm"
+			 input="/admin/showComponentList.jsp"
+			 name="ComponentListForm"
+			 scope="request"
+			 type="org.pmedv.actions.ComponentListAction"
+			 validate="false">
+			 <forward name="showComponentList" path="/admin/showComponentList.jsp" />
+		</action>
+
+		<action
+			 path="/admin/ShowComponent"
+			 attribute="ComponentShowForm"
+			 input="/admin/showComponentDetails.jsp"
+			 name="ComponentShowForm"
+			 parameter="do"
+			 scope="request"
+		     type="org.pmedv.actions.ComponentShowAction"
+			 validate="false">
+			 <forward name="showComponentDetails" path="/admin/showComponentDetails.jsp"/>
+		</action>
+
+   Nun muss noch ein forwarding im Abschnitt <global-forwards> der struts-config.xml erzeugt werden
+   
+   <forward name="showComponentList" path="/admin/ShowComponents.do"/>
+   
+   Es müssen jetzt noch Symbolische Konstanten für die Targets angelegt werden
+   
+   	public static final String SHOW_COMPONENT_LIST           = "showComponentList";
+	public static final String SHOW_COMPONENT_DETAILS        = "showComponentDetails";
+	public static final String CREATE_COMPONENT_SUCCESS      = "createComponentSuccess";
+
+5) die entsprechenden Views im WebContent/admin Ordner anlegen
+   
+   Heisst das Objekt z.B. Component müssen folgende Files erzeugt werden:
+   
+   showComponentDetails.jsp
+   showComponentList.jsp
+   deleteComponentConfirm.jsp
+   createComponent.jsp	 
+	
+6) Jetzt muss der Prozess noch angemeldet werden. Dies kann analog zu den anderen Prozessen
+   im Admin panel geschehen. Zum Schluss sollte der neue Prozess noch in die processes.csv
+   eingetragen werden, damit beim Neuanlegen der DB alle Prozesse erzeugt werden.
+	 

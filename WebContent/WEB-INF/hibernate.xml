@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:amq="http://activemq.apache.org/schema/core"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"		
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd
+              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd	">  
+
+    <bean id="cpmsDS" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>${db.driver}</value></property>
+        <property name="url"><value>${db.url}</value></property>
+        <property name="username"><value>${db.user}</value></property>
+        <property name="password"><value>${db.password}</value></property>
+    </bean>
+
+    <bean id="pool" class="org.apache.commons.pool.impl.GenericObjectPool">
+        <property name="minEvictableIdleTimeMillis"><value>300000</value></property>
+        <property name="timeBetweenEvictionRunsMillis"><value>60000</value></property>
+    </bean>
+
+    <bean id="dsConnectionFactory" class="org.apache.commons.dbcp.DataSourceConnectionFactory">
+        <constructor-arg><ref bean="cpmsDS"/></constructor-arg>
+    </bean>
+
+    <bean id="poolableConnectionFactory" class="org.apache.commons.dbcp.PoolableConnectionFactory">
+        <constructor-arg index="0"><ref bean="dsConnectionFactory"/></constructor-arg>
+        <constructor-arg index="1"><ref bean="pool"/></constructor-arg>
+        <constructor-arg index="2"><null/></constructor-arg>
+        <constructor-arg index="3"><null/></constructor-arg>
+        <constructor-arg index="4"><value>false</value></constructor-arg>
+        <constructor-arg index="5"><value>true</value></constructor-arg>
+    </bean>
+
+    <bean id="myDataSource" class="org.apache.commons.dbcp.PoolingDataSource" depends-on="poolableConnectionFactory">
+        <constructor-arg><ref bean="pool"/></constructor-arg>
+    </bean>
+ 	
+ 	<!-- Hibernate session configuration and mappings for the database tables -->
+ 	
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="mappingResources">
+			<list>
+			
+				<!-- core mappings -->
+			
+				<value>core/Config.hbm.xml</value>
+				<value>core/Avatar.hbm.xml</value>				
+				<value>core/Contact.hbm.xml</value>
+				<value>core/Country.hbm.xml</value>
+				<value>core/Content.hbm.xml</value>
+				<value>core/Download.hbm.xml</value>
+				<value>core/DownloadCategory.hbm.xml</value>
+				<value>core/Gallery.hbm.xml</value>
+				<value>core/Image.hbm.xml</value>
+				<value>core/Node.hbm.xml</value>
+				<value>core/Process.hbm.xml</value>
+				<value>core/Revision.hbm.xml</value>
+				<value>core/SiteRequest.hbm.xml</value>
+				<value>core/User.hbm.xml</value>
+				<value>core/Usergroup.hbm.xml</value>
+				<value>core/UserProfile.hbm.xml</value>
+				<value>core/UserComment.hbm.xml</value>
+				<value>core/Attribute.hbm.xml</value>
+				<value>core/Template.hbm.xml</value>
+				<value>mail/Account.hbm.xml</value>
+				<value>mail/Folder.hbm.xml</value>
+				<value>mail/Message.hbm.xml</value>
+				
+				<!-- forum mappings --> 
+
+				<value>forum/Forum.hbm.xml</value>
+				<value>forum/Category.hbm.xml</value>
+				<value>forum/Thread.hbm.xml</value>
+				<value>forum/Posting.hbm.xml</value>
+				<value>forum/Attachment.hbm.xml</value>
+
+				<!-- Calendar mappings -->
+
+				<value>calendar/Calendar.hbm.xml</value>
+				<value>calendar/Appointment.hbm.xml</value>
+				<value>calendar/Meeting.hbm.xml</value>				
+				<value>calendar/Event.hbm.xml</value>
+				<value>calendar/DateBean.hbm.xml</value>
+				<value>calendar/Participant.hbm.xml</value>
+				
+				<!-- Plugin mappings -->
+			
+				<value>plugins/Faq.hbm.xml</value>
+				
+			</list>
+			
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<!-- 
+				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+				 -->
+				
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				
+				<!-- 
+				     Just uncomment this key if you changed the database structure!
+				     Then deploy and start the tomcat. The schema will be generated,
+				     after that, shutdown again. Comment this line out and dump
+				     the schema with mysqldump or the tool of your choice. Copy
+				     the newly generated file to /WebContent/admin/install/schema.sql
+				     and the installer will be happy next time.
+				 -->    
+				  
+ 				<prop key="hibernate.hbm2ddl.auto">${schema.autocreate}</prop>   
+ 				
+			</props>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,2 @@
+-If a user is being renamed, the according user folder has to be renamed too
+-If a user is being deleted, all profile data has to be deleted too

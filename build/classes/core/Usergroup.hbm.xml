@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Usergroup" table="USERGROUP">
+		
+		<id name="id" column="GROUP_ID" >
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME"/>
+		<property name="description" type="text" column="DESCRIPTION" />
+		
+		<set name="users" 
+			 table="link_user_groups" 
+			 lazy="false"
+			 inverse="true">
+			<key column="GROUP_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.User"
+				column="USER_ID"/>
+		</set>		
+		
+		<set name="processes" 
+			 table="link_process_groups" 
+			 lazy="true"
+			 inverse="true">
+			<key column="GROUP_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Process"
+				column="PROCESS_ID"/>
+		</set>		
+
+		<set name="nodes" 
+			 table="link_node_groups" 
+			 lazy="true"
+			 inverse="true">
+			<key column="GROUP_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Node"
+				column="NODE_ID"/>
+		</set>		
+
+		
+	</class>
+	
+</hibernate-mapping>

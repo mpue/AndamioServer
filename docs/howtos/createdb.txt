@@ -1,0 +1,4 @@
+create database andamio;
+grant usage on *.* to andamio@localhost identified by 'password';
+create user andamio identified by 'password';
+grant all privileges on andamio.* to user@localhost;

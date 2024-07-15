@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="6.0+" codebase="http://www.iomedico.de/"> 
+  <information> 
+    <title>iostudy office edc 5.0</title> 
+    <vendor>iOMEDICO AG</vendor> 
+    <homepage href="index.html"/> 
+    <description>iostudy office edc 5.0</description> 
+  </information> 
+  <security> 
+      <all-permissions/> 
+  </security> 
+  <resources> 
+    <j2se version="1.6+"/> 
+    <jar href="http://www.iomedico.org/edc/edc6/io5client.jar"/> 
+    <jar href="http://www.iomedico.org/edc/edc6/io5clientStudyDev.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6/io5clientDevLibs.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6/io5clientSettings.jar"/>
+
+    <jar href="http://www.iomedico.org/edc/edc6-common/batik-awt-util.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/commons-beanutils-1.7.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/commons-digester-1.7.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/jasperreports-2.0.5.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/jcommon-1.0.0.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/jfreechart-1.0.0.jar"/>		
+    <jar href="http://www.iomedico.org/edc/edc6-common/jhall.jar"/>
+    <jar href="http://www.iomedico.org/edc/edc6-common/jsearch.jar"/>	
+    <jar href="http://www.iomedico.org/edc/edc6-common/l2fprod-common-tasks.jar"/>	
+    <jar href="http://www.iomedico.org/edc/edc6-common/looks-1.3.1.jar"/>	
+    <jar href="http://www.iomedico.org/edc/edc6-common/itext-1.3.1.jar" />
+    <jar href="http://www.iomedico.org/edc/edc6-common/jgoodies-forms.jar" />
+    <jar href="http://www.iomedico.org/edc/edc6-common/io5clientLang_de.jar" />
+
+	<jar href="http://www.iomedico.org/edc/help/io5firststepshelp.jar"/>
+    <jar href="http://www.iomedico.org/edc/help/io5helponhelp.jar"/>
+    <jar href="http://www.iomedico.org/edc/help/io5programhelp.jar"/>
+
+    #STUDYJARS
+  </resources> 
+  <application-desc main-class="IO5.gui.IOMainFrame">
+    #PARAMS
+  </application-desc> 
+</jnlp>

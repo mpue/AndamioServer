@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<patientReport>
+	<patient>
+		<birthDate>1950-02-20T00:00:00+01:00
+		</birthDate>
+		<center>Pott, Dirk</center>
+		<csiParticipant>true</csiParticipant>
+		<currentDose>1180</currentDose>
+		<id>3</id>
+		<insuranceId>46</insuranceId>
+		<lastDocumentation>2009-12-01T00:00:00+01:00
+		</lastDocumentation>
+		<processed>false</processed>
+		<randomNumber>987003</randomNumber>
+		<startDose>10</startDose>
+		<therapyConform>true</therapyConform>
+		<treatmentEnd>false</treatmentEnd>
+		<weight>59.0</weight>
+	</patient>
+	<cycles>
+		<combinations>
+			<applicationDate>29.10.2009</applicationDate>
+			<cycle>1</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<medications>
+			<applicationDate>29.10.2009</applicationDate>
+			<cycle>1</cycle>
+			<parameter>BEVACIZUMAB</parameter>
+			<type>MAINSUBSTANCE</type>
+			<value>590</value>
+		</medications>
+		<number>1</number>
+	</cycles>
+	<cycles>
+		<combinations>
+			<applicationDate>05.11.2009</applicationDate>
+			<cycle>2</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<number>2</number>
+	</cycles>
+	<cycles>
+		<combinations>
+			<applicationDate>26.11.2009</applicationDate>
+			<cycle>3</cycle>
+			<parameter>PACLITAXEL</parameter>
+			<type>MAINSUBSTANCE</type>
+		</combinations>
+		<medications>
+			<applicationDate>26.11.2009</applicationDate>
+			<cycle>3</cycle>
+			<parameter>BEVACIZUMAB</parameter>
+			<type>MAINSUBSTANCE</type>
+			<value>590</value>
+		</medications>
+		<number>3</number>
+	</cycles>
+	<insurance>
+		<id>46</id>
+		<name>BKK Deutsche BP</name>
+	</insurance>
+</patientReport>

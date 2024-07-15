@@ -1,0 +1,173 @@
+11.06.2007 (mpue) V2.01
+    * Download Sektion implementiert
+    * neues Feld in der Tabelle config eingef�gt
+    * neue Tabelle Downloads erzeugt
+    * Referenzen f�r Galerie komplett aus dem Content entfernt (Actions, Forms, Hibernate Pojo und Mapping und JSPs), macht wegen der Plugin Schnittstelle eh keinen Sinn mehr.
+    * diverse Kosmetik im Admin Bereich
+
+(db rebuild notwendig)
+
+12.06.2007 (mpue) V2.01
+    * Download Plugin fertiggestellt, die angelegten Downloads k�nnen nun �ber das Download Plugin angezeigt werden. 
+    * Dateinamen werden korrekt konstruiert.
+    * Hitcounter f�r Downloads hinzugef�gt
+
+(db rebuild notwendig)
+
+5.9.2007 (mpue) V2.02
+	* Thememanager f�r den Adminbereich implementiert und neues Theme (NX06) eingef�gt
+	* Themes k�nnen im Config Bereich ausgew�hlt werden
+	* Neue themes m�ssen nach /admin/themes kopiert werden und m�ssen der Ordnerstruktur von "experience" entsprechen
+	Wichtig : Neues Feld in der Tabelle  "Config" ist notwendig (siehe config.hbm.xml)
+	(Feld [ADMINTEMPLATE,varchar(255)]kann manuell hinzugef�gt werden und muss zun�chst auf "experience" gesetzt werden)
+	* processes.csv angepasst und Pfadangaben der Icons entfernt
+	* Statistik Problem behoben, Requests wurden nicht gez�hlt, wenn die Seite als Node aufgerufen wurde
+	* Umlaut Problem behoben, Inhalte bzw. Nodes mit Umlauten in den Namen wurden nicht gefunden
+	* neuen Filter f�r UTF-8 encoding in org.pmedv.cms.filter erzeugt
+	* Page encoding auf UTF-8 umgestellt und CharsetFilter in web.xml hinzugef�gt
+	* !!!Wichtig, alle Templates m�ssen auf UTF-8 im header umgestellt werden.!!!
+	
+11.9.2007 (mpue) V2.03
+	* Registrierungsdialog implementiert, Benutzer k�nnen sich nun auf der Seite registrieren
+	* Die Registrierung ist abh�ngig vom Template und muss als registration.jsp im jeweiligen
+	  Template Ordner vorhanden sein (ist im Grunde nur eine Kopie der main.jsp mit Formular anstatt Inhalt)
+	* Wichtig : web.xml muss geupdated werden, weil ein neues Servlet f�r die captchas angelegt wurde
+	
+12.9.2007 (mpue) V2.03
+	* c3p0 connection pool von c3p0-0.9.1-pre6 auf c3p0-0.9.1.2 geupdated, in der Hoffnung, da� die
+	  "JDBC could not execute query" Exceptions nun ein Ende haben.
+	* neue Tomcat Option JAVA_OPTS="-XX:MaxPermSize=128m -Xms128m -Xmx384m" sollte mal getestet werden, weil
+	  offenbar der Heap Space manchmal nicht ausreicht (Eintragen in tomcat/bin/catalina.sh)
+
+17.9.2007 (mpue) V2.03
+	* c3p0 Einstellungen in hibernate.cfg.xml abge�ndert. Fehler tritt offenbar nicht mehr auf
+	* abwarten und Tee trinken!	  
+	  
+18.9.2007 (mpue) V2.04
+	* Installationsdialog vervollst�ndigt, das Admintemplate wird jetzt mit �bergeben
+	* configuration.properties um "admin.template=nx06" erg�nzt.
+	* Registrierung vervollst�ndigt
+	* Nodes an Benutzergruppen gebunden, es k�nnen jetzt der jeweiligen Node Gruppen hinzugef�gt werden,
+	  die den Zugriff auf die jeweilige Node reglementieren
+	* Nodes, die keine Gruppenzugeh�rigkeit haben sind �ffentlich
+	* Nodes sind defaultm��ig ohne Gruppe und somit �ffentlich
+	* JoomlaMenuDisplayer angepasst, es muss jetzt ein Parameter "login" �bergeben werden, wenn die Gruppen-
+	  einschr�nkungen wirksam sein sollen. Siehe main.jsp im Template "purpleheart"
+	* Einschr�nkung funktioniert derzeit nur mit Men�typ "Table"
+	* Ich glaub, es ist ein rebuild der db n�tig, wegen der neuen constraints.
+	* P�ski ist der Beste!
+	* Bug 0000060 behoben
+	* Feature 0000056 implementiert, es gibt jetzt Input Felder mit Tooltip
+	* Input Felder mit Tooltip werden mittels eines neuen Tags xinput gerendert, 
+	* Beispiel : <xinput:xinput beanName="ConfigShowForm" property="sitename" key="tooltip.sitename" size="35" styleClass="bs1" id="test"/>
+
+1.10.2007 (mpue) V2.05
+	* Contents haben jetzt einen Zeitstempel mit der letzten �nderung
+	* Zeitstempel kann mit <bean:write name="MainpageForm" property="lastModified"/> augegeben werden
+	* Neues Feld in Content.hbm.xml "lastmodified" hinzugef�gt
+	* Der Prozess "Prozesse verwalten" kann nun weder gel�scht noch inaktiv geschaltet werden.
+	  Vorraussetzung hierf�r ist allerdings, da� die DB neu geschrieben wird, damit dieser Prozess die ID 1
+	  bekommt. Ausserdem kann man diesen Prozess jetzt nicht mehr aus der Admingruppe nehmen.
+	* Konfigurationsdialog mit Tooltips vervollst�ndigt
+	* <xinput> hat neues Attribut "type"
+	 
+(db rebuild notwendig)	
+	
+3.10.2007 (mpue)  V2.05
+	* Neuen Ajax Contenteditor implementiert (Alpha!)
+	* Soll der neue Editor aktiv sein, so muss im Prozesseditor das Ziel f�r den Contentmanager
+	  auf ShowContent.do?do=editContents gesetzt werden.
+	* Editor ist noch nicht intensiv getestet, man sollte also keine Wunder erwarten.
+	* Configurationsdialog aufger�umt (Experience Theme m�sste noch angepasst werden)
+	* <xinput> hat neues Attribut "id", ben�tigt f�r Ajax Editor 
+	
+4.10.2007 (ts)  V2.05
+	* <xinput> alle Ereignishandler	implementiert
+	* Layout Contenteditor ge�ndert
+	* Theme NX-06 auf komplette Bildschirmbreite gezogen
+	* Content editor erweitert
+		
+5.10.2007 (ts)  V2.05
+	* Layout Contenteditor umger�umt und rechten Rand beseitigt
+	
+5.10.2007 (mpue)  V2.05
+	* Contenteditor JavaScript in jscripts/contentEditor ausgelagert
+	* Save Button im Contenteditor ind die Men�leiste verlagert
+	* Umlautproblem in JavaScript alerts behoben
+	* Neues Attribut in der Tabelle Config hinzugef�gt : "startnode"
+	  Hiermit kann jetzt der Einstiegspunkt definiert werden
+	* Tabelle Config, Pojo, ConfigShowForm, ConfigAction, ConfigShowAction, 
+	  configuration.jsp, InstallationForm, InstallationAction ge�ndert
+	* Neuen Prozess "Languages erzeugt. Es k�nnen jetzt Sprachen im System hinterlegt werden.
+	* Diverse Fixes der Adminoberfl�che
+
+(db rebuild notwendig -> hibernate.cfg.xml !!!)		
+
+6.10.2007 (mpue)  V2.05
+	* Layout f. CreateContent an neuen Editor angepasst
+	* Bugfix : contentEditor meldete Problem, falls kein Content mit der ID 1 existierte
+	
+8.10.2007 (mpue) V2.05
+	* Seitensuche implementiert
+	* Benutzer k�nnen nun Seiten nach einem bestimmten Begriff suchen
+	* Beispielsuche in Template "Purpleheart", searchbox.jsp muss in main.jsp eingebunden werden
+	
+13.10.2007 (mpue)  V2.05
+	* Folgende Serverkonfiguration hat sich bisher am besten erwiesen
+	
+	hibernate.cfg.xml:
+	
+		<property name="c3p0.min_size">10</property>
+		<property name="c3p0.max_size">100</property>
+		<property name="c3p0.timeout">100</property>
+		<property name="c3p0.max_statements">0</property>
+		<property name="c3p0.acquire_increment">1</property>
+		<property name="c3p0.idle_test_period">100</property>
+	
+	MySQL Server: 
+		In /etc/mysql/my.cnf
+		
+		Im Abschnitt [mysqld]
+		wait_timeout = 90
+		
+14.10.2007 (mpue)  V2.06
+	
+	* Neue Klasse FormAction, die zur Erzeugung der Buttonbar eines Formulars benutzt wird. Forms, die eine Buttonbar
+	  haben soll, mu� von AbstractBaseAction erben und in der createActions Methode die entsprechenden Actions hinzuf�gen.
+	* Exemplarisches Beispiel der neuen Funktionalit�t ist in der Benutzerverwaltung zu finden.
+	* Bei der Gelegenheit wurden die JSPs der Benutzerverwaltung gleich mal aufger�umt
+	* Neues Tag "buttonbar-displayer" implementiert, die Buttonbar greift auf die FormActions des
+	  jeweiligen Forms zu. Auch hier, ist ein Beipiel in createUser.jsp zu finden.
+	  
+16.10.2007 (mpue)  V2.06
+
+	* Save Problem im Content Editor behoben.
+	* Es musste noch ein Timeout zwischen L�schen und neu Laden der Seite gesetzt werden,
+	  sonst funktioniert es nicht.
+	* Umstellung auf PostgreSQL 8.2
+	* User-hbm.xml ge�ndert, Table "USER" in "SYSUSER" umbenannt, war ein reserviertes Wort in PostgreSQL
+	* Umstellung auf PostgreSQL siehe docs/howtos/postgresqlhowto
+	
+(dbrebuild notwendig)
+
+30.10.2007 (mpue) V2.06
+	* Diverse �nderungen am Content Editor aus dem Stable Branch auf den Head gemerged
+	* Neue Klasse ActionRequest erzeugt, die dazu dient die einzelnen Requests aus den 
+	  Struts-Actions auszulagern.
+
+7.11.2007 (mpue) V2.06
+	* Online Shop begonnen, Pojos und Mappings erzeugt
+	
+8.11.2007 (mpue) V2.06
+	* Implementierung Online-Shop
+	
+9.11.2007 (mpue) V2.06
+	* Implementierung Online-Shop, Erstellen der JSP Seiten f�r das Shop Objekt
+	* AppLogger durch Commons Logging API ersetzt
+	* Tooltip Bug behoben : Wenn Icons zu weit rechts sind, wird der Tooltip rechts aus dem Bild-
+	  schirm rausgeschoben. Tooltip Position ist jetzt abh�ngig von der Bildschirmbreite
+	  
+ 
+	
+		
+	

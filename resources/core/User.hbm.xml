@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.User" table="SYSUSER">
+		
+		<id name="id" column="USER_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" column="NAME"/>		
+		<property name="firstName" column="FIRSTNAME"/>
+		<property name="lastName" column="LASTNAME"/>		
+		<property name="title" column="TITLE" />		
+		<property name="land" column="LAND"/>
+		<property name="ort" column="ORT"/>
+		<property name="telefon" column="TELEFON"/>
+		<property name="email" column="EMAIL"/>
+		<property name="ranking" column="RANKING"/>
+		<property name="password" column="PASSWORD"/>	
+		<property name="joinDate" type="timestamp" column="JOINDATE"/> 
+		<property name="birthDate" type="timestamp" column="BIRTHDATE"/>
+		<property name="lastActivity" type="timestamp" column="LASTACTIVITY"/>
+		<property name="active" column="ACTIVE"/>
+		
+		<set name="groups" 
+			 table="link_user_groups" 
+			 lazy="false">
+			<key column="USER_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Usergroup"
+				column="GROUP_ID"/>
+		</set>		
+		
+		<set name="calendars" 
+			 table="link_user_calendars" 
+			 lazy="false">
+			<key column="USER_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.calendar.Calendar"
+				column="CALENDAR_ID"/>
+		</set>		
+		
+		<set name="avatars"
+			 lazy="false" 
+			 inverse="true" 
+			 cascade="all-delete-orphan">		
+            <key column="USER_ID"/>
+            <one-to-many class="org.pmedv.pojos.Avatar"/>
+        </set>
+
+		<set name="accounts"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="USER_ID"/>
+            <one-to-many class="org.pmedv.pojos.mailsystem.Account"/>
+        </set>		
+        
+        <one-to-one name="userProfile" class="org.pmedv.pojos.UserProfile" cascade="all"/>
+
+		<set name="userComments"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="USER_ID"/>
+            <one-to-many class="org.pmedv.pojos.UserComment"/>
+        </set>
+        
+        <set name="userGalleries"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="USER_ID"/>
+            <one-to-many class="org.pmedv.pojos.Gallery"/>
+        </set>
+        		
+		<set name="attributes"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="USER_ID"/>
+            <one-to-many class="org.pmedv.pojos.Attribute"/>
+        </set>
+        
+        <set name="countries" 
+			 table="link_user_countries" 
+			 lazy="false">
+			<key column="USER_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Country"
+				column="COUNTRY_ID"/>
+		</set>			 
+        
+        
+	</class>
+	
+</hibernate-mapping>

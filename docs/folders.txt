@@ -1,0 +1,10 @@
+WeberknechtCMS Ordnerstruktur:
+
+admin		Enthaelt alle JSP-Seiten, Bilder und Stylesheets fuer den Admin Bereich
+forum		Enthaelt alle JSP-Seiten, Bilder und Stylesheets fuer den Forum Bereich
+images		Enthaelt alle, nicht templatespezifischen, Bilder fuer das CMS
+jscripts	Hier befinden sich alle JavaScripte, die vom System verwendet werden
+templates	Enthaelt die User Templates
+WEB-INF		Enthaelt alle Class-Files, Libraries und XML-Definitions fuer den Servlet Container
+
+

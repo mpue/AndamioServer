@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Gallery" table="GALLERY">
+		
+		<id name="id" column="GALLERY_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="galleryname" column="GALLERYNAME"/>		
+		<property name="description" column="DESCRIPTION"/>
+		<property name="thumbheight" column="THUMBHEIGHT"/>
+		<property name="thumbwidth"  column="THUMBWIDTH"/>
+		<property name="columns"  column="NUMCOLUMNS"/>
+		<property name="template"  column="TEMPLATE"/>
+		<property name="gallerytext" type="text" column="GALLERYTEXT"/>
+		<property name="ranking"     column="RANKING"/>
+		
+		<set name="images"
+			 lazy="false" 
+			 inverse="true" 
+			 sort="org.pmedv.comparator.ImageComparator"
+			 cascade="all-delete-orphan">		
+            <key column="GALLERY_ID"/>
+            <one-to-many class="org.pmedv.pojos.Image"/>
+        </set>
+		
+	</class>
+	
+</hibernate-mapping>

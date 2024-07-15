@@ -1,0 +1,10 @@
+ListProcesses.do?do=list,menu.processes,processes.png,9
+ShowContent.do?do=editContents,menu.contentmanager,contents.png,1
+ListDirectories.do?do=showBrowser,menu.filemanager,files.png,2
+ListUsers.do?do=list,menu.user,users.png,3
+ListUsergroups.do?do=list,menu.usergroups,usergroups.png,4
+ShowConfig.do?do=edit,menu.configuration,config.png,5
+ListPlugins.do?do=list,menu.plugins,plugins.png,6
+JobAction.do?do=showBrowser,menu.jobs,jobs.png,7
+ForumShowAction.do?do=list,menu.forums,forums.png,8
+DownloadAdminAction.do?do=browse,menu.downloads,downloads.png,10

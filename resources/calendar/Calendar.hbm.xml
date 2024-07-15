@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.calendar.Calendar" table="CALENDAR">
+		
+		<id name="id" column="CALENDAR_ID" >
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME"/>
+		<property name="description" type="text" column="DESCRIPTION" />
+		
+		<set name="users" 
+			 table="link_user_calendars" 
+			 lazy="false"
+			 inverse="true">
+			<key column="CALENDAR_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.User"
+				column="USER_ID"/>
+		</set>		
+		
+		<set name="appointments"
+			 lazy="false" 
+			 inverse="true" 
+			 cascade="all-delete-orphan">		
+            <key column="CALENDAR_ID"/>
+            <one-to-many class="org.pmedv.pojos.calendar.Appointment"/>
+        </set>
+        
+		<set name="meetings" 
+			 table="link_calendar_meetings" 
+			 lazy="false">
+			<key column="CALENDAR_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.calendar.Meeting"
+				column="MEETING_ID"/>
+		</set>			
+		
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Process" table="PROCESS">
+		
+		<id name="id" column="PROCESS_ID" >
+			<generator class="increment" />
+		</id>
+	
+		<property name="name" column="NAME" />		
+		<property name="target" column="TARGET" />		
+		<property name="icon" column="ICON" />						
+		<property name="active" column="ACTIVE" />	
+		<property name="position" column="PROCPOSITION" />
+		
+		<set name="groups" 
+			 table="link_process_groups" 
+			 lazy="false">
+			<key column="PROCESS_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Usergroup"
+				column="GROUP_ID"/>
+		</set>					
+		 
+	</class>
+	
+</hibernate-mapping>

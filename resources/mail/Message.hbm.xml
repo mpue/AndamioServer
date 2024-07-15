@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.mailsystem.Message" table="MAIL_MESSAGE">
+		
+		<id name="id" column="MESSAGE_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="subject" column="SUBJECT"/>
+		<property name="body" type="text" column="BODY" />		
+		<property name="sender" type="text" column="SENDER"/>
+		<property name="received" type="timestamp" column="RECEIVED" />
+		<property name="sent" type="timestamp" column="SENT" />
+		<property name="inReplyToMessageId" column="REPLYTO" />		
+		<property name="status" column="STATUS" type="org.pmedv.pojos.MessageStatusEnumUserType" not-null="true"/>
+
+	</class>
+	
+</hibernate-mapping>

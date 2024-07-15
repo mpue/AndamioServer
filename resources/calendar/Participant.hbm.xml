@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.calendar.Participant" table="PARTICIPANT">
+		
+		<id name="id" column="PARTICIPANT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="firstname" column="firstname"/>	
+		<property name="lastname" column="lastname"/>
+
+		<set name="possibleDates"
+			 lazy="false" 
+			 inverse="false"
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="PARTICIPANT_ID"/>
+            <one-to-many class="org.pmedv.pojos.calendar.DateBean"/>
+        </set>
+				
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:amq="http://activemq.apache.org/schema/core"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"		
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd
+              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd	">  
+
+
+	<bean id="contextApplicationContextProvider" class="org.pmedv.context.ApplicationContextProvider"></bean>
+
+	<!-- Connection pool and datasource configuration -->
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/application.properties</value>
+		</property>
+	</bean>
+
+	<!-- Database configuration -->
+
+	<import resource="hibernate.xml"/>
+
+    <!-- Data access object definitions -->
+
+	<import resource="daos.xml"/>
+
+    <!-- Local services -->
+
+	<import resource="services.xml"/>
+	
+	<!-- Security constraints -->
+	
+	<security:http>	
+    	<security:intercept-url pattern="/remoting/**" access="ROLE_USER" />
+    	<security:http-basic/>    	
+  	</security:http>
+
+	<security:authentication-provider user-service-ref="cmsUserDetailsService">
+	</security:authentication-provider>
+	 
+	<!-- Session watchdog and scheduler --> 
+	 
+	<bean id="sessionCollector" class="org.pmedv.session.SessionCollector"/>	 	 
+	<bean id="schedulerControl" class="org.pmedv.jobs.SchedulerControl" destroy-method="close"/>
+
+	<bean id="chatUserList" class="org.pmedv.session.ChatUserList"/>
+
+	<!-- JMS / ActiveMQ -->
+
+	<import resource="jms.xml"/>
+
+	
+		 		
+</beans>
+

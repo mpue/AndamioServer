@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.forums.Forum" table="FORUM">
+		
+		<id name="id" column="FORUM_ID">
+        	<generator class="increment"/>
+        </id>
+			
+		<property name="name" column="NAME"/>	
+		<property name="position" column="POSITION"/>	
+		<property name="description" column="DESCRIPTION"/>								
+		<property name="status" column="STATUS"/>	
+		
+		<set name="categories"
+			 lazy="false" 
+			 inverse="true" 
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="FORUM_ID"/>
+            <one-to-many class="org.pmedv.pojos.forums.Category"/>
+        </set>	
+		 	
+		<set name="groups" 
+			 table="link_forum_groups" 
+			 lazy="false">
+			<key column="FORUM_ID"/>
+			<many-to-many 
+				class="org.pmedv.pojos.Usergroup"
+				column="GROUP_ID"/>
+		</set>	
+				 	      							
+	</class>
+	
+</hibernate-mapping>

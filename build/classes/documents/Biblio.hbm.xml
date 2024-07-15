@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.documents.Biblio" table="BIBLIO">
+		
+		<id name="id" column="ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="identifier" column="Identifier"/>
+		<property name="type" column="BibliographyType"/>
+		<property name="title" column="Title"/>
+		<property name="address" column="Address"/>
+		<property name="annote" column="Annote"/>
+		<property name="author" column="Author"/>
+		<property name="booktitle" column="Booktitle"/>
+		<property name="chapter" column="Chapter"/>
+		<property name="edition" column="Edition"/>
+		<property name="editor" column="Editor"/>
+		<property name="howpublish" column="Howpublished"/>
+		<property name="institution" column="Institution"/>
+		<property name="journal" column="Journal"/>
+		<property name="month" column="Month"/>
+		<property name="note" column="Note"/>
+		<property name="number" column="Number"/>
+		<property name="organization" column="Organizations"/>
+		<property name="pages" column="Pages"/>
+		<property name="publisher" column="Publisher"/>
+		<property name="school" column="School"/>
+		<property name="series" column="Series"/>
+		<property name="reportType" column="ReportType"/>
+		<property name="volume" column="Volume"/>
+		<property name="url" column="URL"/>
+		<property name="year" column="Year"/>
+		<property name="custom1" column="Custom1"/>
+		<property name="custom2" column="Custom2"/>
+		<property name="custom3" column="Custom3"/>
+		<property name="custom4" column="Custom4"/>
+		<property name="custom5" column="Custom5"/>
+		<property name="isbn" column="ISBN"/>
+		<property name="created" type="timestamp" column="CREATED" />
+		<property name="lastmodified" type="timestamp" column="LASTMODIFIED" />
+		<property name="lastmodifiedby" column="LASTMODIFIEDBY" />						
+		<property name="submittedBy" column="SUBMITTEDBY"/>
+			
+
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="remoteAuthenticationService" class="org.pmedv.services.AuthenticationServiceImpl">
+    </bean>
+    
+    <bean id="remoteGalleryService" class="org.pmedv.services.GalleryServiceImpl">
+    </bean>
+
+    <bean id="remoteTemplateService" class="org.pmedv.services.TemplateServiceImpl">
+    </bean>
+
+
+    <bean name ="/RemoteAuthenticationService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="remoteAuthenticationService" />
+        <property name="serviceInterface" value="org.pmedv.services.AuthenticationService"/>
+    </bean> 
+
+    <bean name ="/RemoteGalleryService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="remoteGalleryService" />
+        <property name="serviceInterface" value="org.pmedv.services.GalleryService"/>
+    </bean> 
+
+    <bean name ="/RemoteTemplateService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="remoteTemplateService" />
+        <property name="serviceInterface" value="org.pmedv.services.TemplateService"/>
+    </bean>
+    
+</beans>

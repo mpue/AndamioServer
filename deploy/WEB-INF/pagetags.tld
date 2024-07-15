@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+	<tlibversion>1.2</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>PageTags</shortname>
+	<uri></uri>
+
+	<tag>
+		<name>pathway</name>
+		<tagclass>org.pmedv.web.customtags.PathwayDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays the pathway for a current content</info>
+		
+		<attribute>
+			<name>nodeName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+			<name>separator</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>			
+		<attribute>
+			<name>exclude</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		
+	</tag>
+
+	<tag>
+		<name>pagetitle</name>
+		<tagclass>org.pmedv.web.customtags.PagetitleDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays the pagetitle for the currently selected node</info>		
+	</tag>
+
+	<tag>
+		<name>stylesheet</name>
+		<tagclass>org.pmedv.web.customtags.StylesheetDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays the stylesheet for the currently selected template</info>		
+	</tag>
+
+	<tag>
+		<name>xmenu</name>
+		<tagclass>org.pmedv.web.customtags.XMenuDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a menubar.</info>
+		
+		<attribute>
+			<name>startNode</name>
+			<required>false</required>
+		</attribute>		
+
+        <attribute>
+            <name>selected</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>    
+
+        <attribute>
+            <name>forceLevelIndent</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>    
+
+		<attribute>
+			<name>mode</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>orientation</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>exclude</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>rootNodeCallback</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>childNodeCallback</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>target</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+		<attribute>
+			<name>navigationCallback</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+
+	</tag>
+	<tag>
+		<name>config</name>
+		<tagclass>org.pmedv.web.customtags.ConfigTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a config property.</info>		
+		<attribute>
+			<name>property</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>			
+		</attribute>		
+	</tag>
+	<tag>
+		<name>staticContent</name>
+		<tagclass>org.pmedv.web.customtags.StaticContentDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a static content.</info>		
+		<attribute>
+			<name>path</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>			
+		</attribute>		
+	</tag>
+	<tag>
+		<name>lastModified</name>
+		<tagclass>org.pmedv.web.customtags.LastModifiedDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a static content.</info>		
+		<attribute>
+			<name>showDate</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>			
+		</attribute>
+		<attribute>
+			<name>showUser</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>			
+		</attribute>		
+	</tag>
+	<tag>
+		<name>language</name>
+		<tagclass>org.pmedv.web.customtags.LanguageDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a language chooser.</info>		
+		<attribute>
+			<name>languages</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>			
+		</attribute>		
+	</tag>
+	<tag>
+		<name>target</name>
+		<tagclass>org.pmedv.web.customtags.TargetDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a hidden input field indicating a page target.</info>		
+	</tag>		
+	<tag>
+		<name>hiddenInput</name>
+		<tagclass>org.pmedv.web.customtags.HiddenInputDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>		
+		<info>Displays a hidden input field containing a user defined property.</info>		
+		<attribute>
+			<name>scope</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>						
+		</attribute>
+		<attribute>
+			<name>property</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>						
+		</attribute>		
+	</tag>
+	<tag>
+		<name>value</name>
+		<tagclass>org.pmedv.web.customtags.ValueDisplayer</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>Displays a system value from the request or the current session.</info>		
+		<attribute>
+			<name>scope</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>						
+		</attribute>
+		<attribute>
+			<name>property</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>						
+		</attribute>		
+	</tag>					
+</taglib>

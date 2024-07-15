@@ -1,0 +1,14 @@
+Hinweise zur Umstellung von Weberknecht auf PostgreSQL Datenbank:
+
+Postgres Windows Installer runterladen
+
+http://ftp.de.postgresql.org/mirror/postgresql/binary/v8.2.5/win32/postgresql-8.2.5-1.zip
+
+Installieren umit Standardoptionen und DB mit pgAdmin anlegen.
+
+Alles mal auschecken, insbesondere den WEB-INF Ordner, wegen dem PostgreSQL JDBC Treiber
+
+hibernate.cfg.xml auschecken und ggf. anpassen, auto-create einschalten
+
+Clean, Deploy, Tomcat restart
+

@@ -1,0 +1,126 @@
+<project name="andamio" default="compile" basedir=".">
+
+	<property file="build.properties"/>
+
+	<property name="app.home"      value=""/>
+	<property name="build.home"    value="deploy"/>
+	<property name="resource.home" value="resources"/>
+	<property name="deploy.home"   value="${catalina.home}/webapps/${app.deploy.name}"/>
+	<property name="dist.home"     value="dist"/>
+	<property name="package.file"  value="${dist.home}/andamio.war"/>
+
+	<property name="compile.debug"       value="true"/>
+	<property name="compile.deprecation" value="false"/>
+	<property name="compile.optimize"    value="false"/>
+
+	<path id="compile.classpath">
+
+		<!-- Include all elements that Tomcat exposes to applications -->
+		<pathelement location="${catalina.home}/common/classes"/>
+		<fileset dir="${catalina.home}/lib">
+			<include name="*.jar"/>
+		</fileset>
+
+		<pathelement location="${devel.home}/${app.name}/WebContent/WEB-INF/lib"/>
+		<fileset dir="${devel.home}/${app.name}/WebContent/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+
+	</path>
+
+	<target name="all" depends="clean,compile" description="Clean build and dist, then compile"/>
+
+	<target name="clean" description="Delete old build and dist directories">
+		<delete dir="${build.home}"/>
+		<delete dir="${dist.home}"/>
+	</target>
+
+	<target name="compile" depends="prepare"
+   description="Compile Java sources">
+
+		<!-- Compile Java classes as necessary -->
+		<mkdir    dir="${build.home}/WEB-INF/classes"/>
+		<javac srcdir="src"
+          destdir="${build.home}/WEB-INF/classes"
+           debug="${compile.debug}"
+     deprecation="${compile.deprecation}"	
+        optimize="${compile.optimize}">
+			<classpath refid="compile.classpath"/>
+		</javac>
+
+		<!-- Copy associated resource files -->
+		<copy  todir="${build.home}/WEB-INF/classes">
+			<fileset dir="src" includes="**/*.properties"/>
+		</copy>
+
+	</target>
+
+	<target name="deploy" depends="compile"  description="Deploy application to servlet container">
+
+		<!-- Copy the contents of the build directory -->
+		<mkdir     dir="${deploy.home}"/>
+		<copy    todir="${deploy.home}">
+			<fileset dir="${build.home}"/>
+		</copy>
+		<copy    todir="${deploy.home}/WEB-INF/classes">
+			<fileset dir="${resource.home}"/>
+		</copy>
+		<copy    todir="${deploy.home}/docs">
+			<fileset dir="docs"/>
+		</copy>
+
+		<copy    todir="${deploy.home}/WEB-INF/classes/org">
+			<fileset dir="${devel.home}/${app.name}/build/classes/org"/>
+		</copy>
+		<copy    todir="${deploy.home}/WEB-INF/classes/nl">
+			<fileset dir="${devel.home}/${app.name}/build/classes/nl"/>
+		</copy>
+		<copy    todir="${deploy.home}/WEB-INF/classes/http">
+			<fileset dir="${devel.home}/${app.name}/build/classes/http"/>
+		</copy>
+
+	</target>
+
+	<target name="dist" depends="deploy,javadoc" description="Create binary distribution">
+
+		<!-- Copy documentation subdirectory -->
+		<copy    todir="${dist.home}/docs">
+			<fileset dir="docs"/>
+		</copy>
+
+		<copy    todir="${build.home}/WEB-INF/classes">
+			<fileset dir="${resource.home}"/>
+		</copy>		
+
+		<!-- Create application JAR file -->
+		<jar jarfile="${dist.home}/${app.name}.war" basedir="${build.home}"/>
+
+		<!-- Copy additional files to ${dist.home} as necessary -->
+
+	</target>
+
+	<target name="javadoc" depends="compile" description="Create Javadoc API documentation">
+
+		<mkdir          dir="${dist.home}/docs/api"/>
+		<javadoc sourcepath="src"
+                destdir="${dist.home}/docs/api"
+           packagenames="*">
+			<classpath refid="compile.classpath"/>
+		</javadoc>
+
+	</target>
+
+	<target name="prepare">
+
+		<!-- Create build directory and copy static content -->
+		<mkdir  dir="${build.home}"/>
+		<copy todir="${build.home}">
+			<fileset dir="WebContent"/>			
+		</copy>
+		<mkdir  dir="${build.home}/WEB-INF/lib"/>
+
+	</target>
+
+
+
+</project>

@@ -1,0 +1,678 @@
+body {
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+hr {
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+a {
+	FONT-FAMILY: Verdana, Helvetica;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	color: #000022;
+}
+
+p {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: justify;
+	color: #000000;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;;
+	font-family: Verdana;;
+	font-weight: bold;;
+	font-size: 10pt;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;;
+	font-family: Verdana;;
+	font-weight: bold;;
+	font-size: 10pt;
+}
+
+a:active {
+	color: #000000;
+	text-decoration: none;;
+	font-family: Verdana;;
+	font-weight: bold;;
+	font-size: 10pt;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;;
+	font-family: Verdana;;
+	font-weight: bold;;
+	font-size: 10pt;
+}
+
+.tooltip {
+	position: absolute;
+	display: none;
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	padding: 2px;
+	font-family: Verdana;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+span.excel {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+span.csv {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+span.xml {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+span.pdf {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+span.pagebanner {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+span.pagelinks {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	color: #000000;
+	background-color: #DDDDDD;
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+}
+
+table.A4 {
+	width: 180mm;
+	height: 287mm;;
+	margin-left: 15mm
+}
+
+table.Product {
+	width: 100%;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.standardT {
+	background-color : #CCCCCC;
+	width: 100%;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-color: #222222;
+	border-top-color: #DDDDDD;
+	border-top : none;
+	border-bottom : none;
+	border-right-color: #222222;
+	border-left-color: #DDDDDD;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.menubar {
+	/*
+	background-color: #CCCCCF;
+	vertical-align: middle;
+	border-style: solid;
+	border-spacing: 2px;
+	border-width: 1px;
+	border-bottom-color: #222222;
+	border-right-color: #222222;
+	border-top-color: #EEEEEE;
+	border-left-color: #EEEEEE;
+	*/
+	font-family: Verdana;
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.form {
+	width: 100%;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: thin;
+	background-color: #DDDDDE;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.Mainpage {
+	width: 100%;
+	vertical-align: middle;
+	border-style: solid;
+	border-spacing: 0px;
+	border-width: 1px;
+	border-top: none;
+	border-bottom: none;
+	background-color: #EEEEEE;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0px;
+}
+
+table.HeaderAndFooter {
+	width: 100%;
+	vertical-align: middle;
+	vertical-align: middle;
+	border-style: solid;
+	border-spacing: 0px;
+	border-width: 1px;
+	border-top: none;
+	border-bottom: none;
+	background-color: #EEEEEE;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0px;
+}
+
+table.menu {
+	width: 100%;
+	background-color: #EEEEEE;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+table.innerform {
+	width: 70%;
+	vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.TableHeader {
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+	width: 100%;
+	vertical-align: middle;
+	border-width: 1px;
+	background-color: #DDDDDD;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+tr.Header {
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+	width: 100%;
+	vertical-align: middle;
+	border-width: 1px;
+	background-color: #DDDDDD;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+tr.odd {
+	background-color: #DDDDDE;
+}
+
+tr.even {
+	background-color: #EEEEEF;
+}
+
+tr.rowMouseOver {
+	background-color: #FFFFFF;
+}
+
+th.sortable {
+	border-width: thin;
+	border-style: solid;
+	border-color: #222222;
+	color: #000000;
+	background-color: #DDDDDD;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.error {
+	border-width: thin;
+	border-style: none;
+	border-color: black;
+	vertical-align: middle;
+	background-color: #DDDDDD;
+	color: #000000;
+	width: 100%;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+td.menuitem {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	border-spacing: 0px;
+	background-color: #CCCCDD;
+	text-align: center;
+}
+
+td.menuitem2 {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	border-left: none;
+	border-right: none;
+	border-spacing: 0px;
+	background-color: #CCCCDD;
+}
+
+td.directoryInfo {
+	font-size: 9pt;
+	font-family: Verdana;
+	font-weight: bold;
+	background-color: #F0F0F0;
+	text-align: left;
+}
+
+table.PreviewTitle {
+	border-width: thin;
+	border-style: solid;
+	border-color: black;
+	width: 100%;
+	height: 35px;
+	vertical-align: middle;
+	border-spacing: 2px;
+	border-width: 1px;
+	background-color: #5F8BC7;
+	color: #FFFFFF;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table.produktInfo {
+	width: 100%;
+	vertical-align: middle;
+	border-spacing: 5px;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}
+
+td.NavTree {
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	font-size: 11pt;
+	font-style: normal;
+	font-weight: normal;
+}		
+
+td.hinweis {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 13pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	LETTER-SPACING: 0.3mm;
+	color: #000000;
+}
+
+td.desc_left {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	color: #000000;
+}
+
+td.desc_center {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 14pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	font-stretch: expanded;
+	color: #000000;
+}
+
+td.desc_right {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: right;
+	color: #000000;
+}
+
+td.text_left {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: justify;
+	padding-left : 15px;
+	padding-right : 15px;	
+    color: #000000;
+    background-color : #EEEEEE; 
+	margin-left: 25px;
+	margin-right: 5px;
+}
+
+
+span.Bold12 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: justify;
+	color: #000080;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+span.Bold15 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 15pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: justify;
+	color: #000080;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+span.Normal12 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: justify;
+	color: #000080;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+span.Normal15 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 15pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: justify;
+	color: #000080;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+td.imagedescription {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	color: #000080;
+}
+
+p.text_error {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 9pt;
+	FONT-STYLE: italic;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: left;
+	color: #000000;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+p.title_error {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 10pt;
+	FONT-STYLE: italic;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	color: #000000;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+td.text_center_mini {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	color: #000000;
+}
+
+td.text_left_mini {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	color: #000000;
+}
+
+td.text_center_big {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: center;
+	color: #000080;
+}
+
+td.text_left_big {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	color: #000000;
+}
+
+td.text_center {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: center;
+	color: #000000;
+	background-color : #EEEEEE;	
+	margin-left: 15px;
+	margin-right: 5px;
+}
+
+td.text_right {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: right;
+	color: #000000;
+}
+
+td.text_right_b {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: right;
+	color: #000000;
+}
+
+ul.features {
+	MARGIN-LEFT: 0px;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 10pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: left;
+	color: #000000;
+	list-style-position: outside;
+}
+
+textarea.text_left {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11pt;
+	FONT-STYLE: normal;
+	FONT-WEIGHT: normal;
+	TEXT-ALIGN: left;
+	color: #000000;
+}
+
+.bs1 {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid #000000;
+}
+
+textarea.error {
+	font-family: Verdana;
+	font-size: 8px;
+	font-style: normal;
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid #888888;
+}
+
+checkbox.bs1 {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	background-color: #EEEEEE;
+	color: #000000;
+	border: 1px solid #000000;
+}
+
+.bs3 {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	width: 150px;
+	background-color: #FFFFFF;
+	border: 1px outset #111111;
+}
+
+.standard {
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	border: 2px outset #202020;
+}
+
+.inTable {
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	background-color: #D0D0E0;
+}
+
+table.setup {
+    border-collapse :collapse;	
+	margin-left: 10px;
+	width: 750px;
+    vertical-align: middle;
+    margin-left:auto; margin-right:auto;
+}	
+
+td.icontext {
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: center;
+    color: #000000;
+}

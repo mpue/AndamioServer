@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<interview>
+	<name>Some stupid interview</name>
+    <questions>
+    	<name>q1</name>
+        <text>Wie würden Sie sich im Umgang mit Computern einschätzen?</text>
+        <type>RADIO_CHOICE</type>
+        <answers>
+            <text>Was ist das?</text>
+            <name>never</name>
+        </answers>
+        <answers>
+            <text>Anfänger</text>
+            <name>beginner</name>
+        </answers>
+        <answers>
+            <text>Fortgeschrittener</text>
+            <name>advanced</name>
+        </answers>
+        <answers>
+            <text>Experte</text>
+            <name>advanced</name>
+        </answers>
+        <answers>
+            <text>Guru</text>
+            <name>guru</name>
+        </answers>
+    </questions>
+    <questions>
+	    <name>whatAreYourHobbies</name>	
+        <text>Was sind Ihre Hobbies?</text>
+        <type>CHECKBOX</type>
+        <answers>
+            <text>Kino</text>
+            <name>kino</name>
+        </answers>
+        <answers>
+            <text>Kunst und Theater</text>
+            <name>artsAnTheater</name>
+        </answers>
+        <answers>
+            <text>Radfahren</text>
+            <name>bicycle</name>
+        </answers>
+        <answers>
+            <text>Putzen</text>
+            <name>clean</name>
+        </answers>
+        <answers>
+            <text>Motorradfahren</text>
+            <name>motorbikes</name>
+        </answers>        
+    </questions>
+   <questions>
+		<name>partnership</name>	
+        <text>Beziehungsstatus</text>
+        <type>RADIO_CHOICE</type>
+        <answers>
+            <text>ledig</text>
+            <name>single</name>
+        </answers>
+        <answers>
+            <text>verheiratet</text>
+            <name>married</name>
+        </answers>
+        <answers>
+            <text>verwitwert</text>
+            <name>widow</name>
+        </answers>
+        <answers>
+            <text>in einer beziehung</text>
+            <name>partner</name>
+        </answers>        
+    </questions>
+    <questions>
+		<name>describeYourself</name>	
+        <text>Beschreiben sie sich selbst in wenigen Worten</text>
+        <type>TEXT</type>
+    </questions>
+</interview>

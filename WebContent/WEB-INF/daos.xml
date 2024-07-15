@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:amq="http://activemq.apache.org/schema/core"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"		
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd
+              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd	">  
+
+	<bean id="abstractDAO" abstract="true" class="org.pmedv.cms.daos.AbstractDAO">
+	</bean>
+
+	<bean id="baseDAO" class="org.pmedv.cms.daos.BaseDAO" parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="configDAO" class="org.pmedv.cms.daos.ConfigDAO" parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="contactDAO" class="org.pmedv.cms.daos.ContactDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="contentDAO" class="org.pmedv.cms.daos.ContentDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="downloadDAO" class="org.pmedv.cms.daos.DownloadDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="galleryDAO" class="org.pmedv.cms.daos.GalleryDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="imageDAO" class="org.pmedv.cms.daos.ImageDAO" parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="nodeDAO" class="org.pmedv.cms.daos.NodeDAO" parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="processDAO" class="org.pmedv.cms.daos.ProcessDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="siteRequestDAO" class="org.pmedv.cms.daos.SiteRequestDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="userDAO" class="org.pmedv.cms.daos.UserDAO" parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="usergroupDAO" class="org.pmedv.cms.daos.UsergroupDAO"
+		parent="abstractDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+    <bean id="templateDAO" class="org.pmedv.cms.daos.TemplateDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+
+    <bean id="biblioDAO" class="org.pmedv.cms.daos.BiblioDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+
+    <bean id="accountDAO" class="org.pmedv.cms.daos.AccountDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+
+    <bean id="folderDAO" class="org.pmedv.cms.daos.FolderDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+
+    <bean id="messageDAO" class="org.pmedv.cms.daos.MessageDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="countryDAO" class="org.pmedv.cms.daos.CountryDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+	<!-- Calendar daos -->
+	
+    <bean id="calendarDAO" class="org.pmedv.cms.daos.CalendarDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>    
+    
+     <bean id="meetingDAO" class="org.pmedv.cms.daos.MeetingDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>  
+
+     <bean id="appointmentDAO" class="org.pmedv.cms.daos.AppointmentDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+        	
+     <bean id="eventDAO" class="org.pmedv.cms.daos.EventDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="participantDAO" class="org.pmedv.cms.daos.ParticipantDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>    	
+    
+    <!-- Plugin daos -->
+    
+    <bean id="faqDAO" class="org.pmedv.cms.daos.FaqDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>  
+        	
+	<!-- Forum daos -->
+	        	
+    <bean id="categoryDAO" class="org.pmedv.cms.daos.CategoryDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="forumDAO" class="org.pmedv.cms.daos.ForumDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="threadDAO" class="org.pmedv.cms.daos.ThreadDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+
+    <bean id="postingDAO" class="org.pmedv.cms.daos.PostingDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="attachmentDAO" class="org.pmedv.cms.daos.AttachmentDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>    
+
+    <bean id="downloadCategoryDAO" class="org.pmedv.cms.daos.DownloadCategoryDAO" parent="abstractDAO">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>    
+    
+    
+    	
+</beans>    

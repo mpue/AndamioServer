@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.mailsystem.Account" table="MAIL_ACCOUNT">
+		
+		<id name="id" column="ACCOUNT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" column="NAME"/>
+		<property name="type" column="TYPE" type="org.pmedv.pojos.MailServerAccountEnumUserType" not-null="true"/>
+		<property name="recvhost" column="RECVHOST"/>
+		<property name="sendhost" column="SENDHOST"/>
+		<property name="remoteuser" column="REMOTEUSER"/>
+		<property name="remotepass" column="REMOTEPASS"/>
+		
+		<set name="folders"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="ACCOUNT_ID"/>
+            <one-to-many class="org.pmedv.pojos.mailsystem.Folder"/>
+        </set>
+			
+
+	</class>
+	
+</hibernate-mapping>

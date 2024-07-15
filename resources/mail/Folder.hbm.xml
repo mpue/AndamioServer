@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.mailsystem.Folder" table="MAIL_FOLDER">
+		
+		<id name="id" unsaved-value="0">
+			<generator class="native"/>
+        </id>
+			
+		<property name="name" column="NAME"/>	
+				
+		<set name="children" lazy="false" inverse="true" cascade="all" sort="org.pmedv.comparator.FolderComparator">
+           <key column="FOLDER_ID"/>
+           <one-to-many class="org.pmedv.pojos.mailsystem.Folder"/>
+      	</set>     
+
+      	<many-to-one name="parent" class="org.pmedv.pojos.mailsystem.Folder" column="FOLDER_ID" lazy="false"/>
+
+		<set name="messages"
+			 lazy="false" 
+			 inverse="false" 
+			 cascade="all-delete-orphan">		
+            <key column="FOLDER_ID"/>
+            <one-to-many class="org.pmedv.pojos.mailsystem.Message"/>
+        </set>
+
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Test</title>
+
+		<style type="text/css">
+		
+			.red {
+				background-color: #ff0000;
+				width: 100px;
+				height: 100px;
+			}		
+		
+		</style>
+		
+		<script type="text/javascript"  src="prototype.js"></script>
+		<script type="text/javascript"  src="test.js"></script>
+
+	</head>
+	
+	<body onLoad="getCountries();">
+		<table border="0" align="center" width="70%">
+			<tr>
+				<td>
+					Select your country
+				</td>	
+				<td>
+					<select name="country" onkeyup="processSelection(this.options[this.selectedIndex].value);" onchange="processSelection(this.options[this.selectedIndex].value);"></select>					
+				</td>		
+		</table>		
+		<h2><b> Your Partners : </h2></p>		
+		<div id="users">		
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,487 @@
+body {
+	font-family: sans-serif;
+}
+
+.cmenu {
+	margin: 0;
+	padding: 0.3em;
+	list-style-type: none;
+	background-color: #eee;
+}
+
+.cmenu li:hover {
+	
+}
+
+.cmenu hr {
+	border: 0;
+	border-bottom: 1px solid grey;
+	margin: 1px 0px 1px 0px;
+	width: 10em;
+}
+
+.cmenu a {
+	text-decoration: none;
+	color : #000;		
+}
+
+.appointmentMonth {
+	background-image: url(../images/clock_small.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 18px; 		
+	font-size : 9pt;
+	margin-top : 3px;
+	text-decoration: none;	
+	color : #000;	
+	z-index:2;		
+	cursor: move;
+	font-weight: normal;
+}
+
+.appointmentWeek {
+	background-image: url(../images/clock_small.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	font-size : 8pt;
+	text-decoration: none;	
+	color : #000;	
+	z-index:2;		
+	font-weight: normal;
+	
+	border : 1px solid #000;	
+/* 	z-index: 3;		 */
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	
+}
+
+.holiday {
+	background-position: left;
+	background-repeat: no-repeat;	
+	font-size : 9pt;
+	text-decoration: none;	
+	color : #000;	
+	cursor: default;
+	font-weight: normal;
+}
+
+.appointmentMonth:HOVER {
+	font-weight: bold;
+	color : #f00;
+}
+
+a.appointmentMonth:hover {
+	text-decoration: underline;
+	color : #000;			
+}
+
+.appointmentWeekHeader:HOVER {
+	font-weight: bold;
+	color : #f00;
+}
+
+a.appointmentWeekHeader:hover {
+	text-decoration: underline;
+	color : #000;			
+}
+
+ul {
+	list-style-type: none;
+}
+
+li.appointment {
+	background-image: url(../images/calendar_add.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	font-size: 9pt; 
+}
+
+li.delete {
+	background-image: url(../images/delete.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	font-size: 9pt; 
+}
+
+li.open {
+	background-image: url(../images/calendar_view_day.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	font-size: 9pt; 
+}
+
+input.last {
+	background-image: url(../images/control_rewind_blue.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 18px; 		
+}
+
+input.next{
+	background-image: url(../images/control_fastforward_blue.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 18px; 		
+}
+
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+
+.divContext { 
+}
+
+.cmenu a:hover {
+	text-decoration: none;
+	background-color: #444;
+	color: #fff;	
+}
+
+.cmenu .topSep {
+	font-size: 90%;
+	border-top: 1px solid gray;
+	margin-top: 0.3em;
+	padding-top: 0.3em;
+}
+
+.content {
+	background-color: #efefef;
+	vertical-align: middle;	
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	width: 890px;
+	height : 745px;
+	margin-left: -450px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');	
+	
+}
+
+.header {
+	font-weight: bold;
+	text-align: center;
+}
+
+.appointmentDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 444px;
+	height: 407px; 
+	left:50%;
+	margin-left:-197px;				
+	top:50%;
+	margin-top:-128px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+.selectColorDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 425px;
+	height: 425px; 
+	left:50%;
+	margin-left:-197px;				
+	top:50%;
+	margin-top:-128px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+.createCalendarDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 444px;
+	height: 275px; 
+	left:50%;
+	margin-left:-197px;				
+	top:50%;
+	margin-top:-128px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+.shareCalendarDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 244px;
+	height: 217px; 
+	left:50%;
+	margin-left:-197px;				
+	top:50%;
+	margin-top:-128px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+#eventDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 400px;
+	height: 400px; 
+	left:50%;
+	margin-left:-200px;				
+	top:50%;
+	margin-top:-225px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+#inviteDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 400px;
+	height: 300px; 
+	left:50%;
+	margin-left:-200px;				
+	top:50%;
+	margin-top:-200px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+#messageDiv {
+	background-color : white;
+	border : 1px solid #000;	
+	z-index: 3;		
+	position : absolute;
+	width: 400px;
+	height: 200px; 
+	left:50%;
+	margin-left:-200px;				
+	top:50%;
+	margin-top:-100px;
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+}
+
+
+#eventDetails {
+	background-color : #ddd;
+	width : 100%;
+		
+	-moz-box-shadow: 3px 3px 4px #222;
+	-webkit-box-shadow: 3px 3px 4px #222;
+	box-shadow: 3px 3px 4px #222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');		
+	
+}
+
+.dialogTitle {
+	background-image: url(../images/clock.png);
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	background-color : #ccc;
+	border-bottom : 1px solid #000;	
+	color:#000;
+	padding-left : 35px;
+	padding-top:8px;
+	padding-bottom: 8px;
+}
+
+.dialogSubtitle {
+	padding-top: 5px;
+	padding-left : 35px;
+	font-size: 9pt;
+	text-align: left;
+}
+
+.dialogTitleEvent {
+	background-image: url(../images/clock.png);
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	background-color : #ccc;
+	border-bottom : 1px solid #000;	
+	color:#000;
+	padding-left : 30px;
+	padding-top:8px;
+	padding-bottom: 10px;
+	width: 370px;
+}
+
+.dialogSubtitleEvent {
+	padding-top: 10px;
+	padding-left : 25px;
+	font-size: 9pt;
+	text-align: left;
+}
+
+
+#messageTitle {
+	background-image: url(../images/clock.png);
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	background-color : #ccc;
+	border-bottom : 1px solid #000;	
+	color:#000;
+	padding-left : 35px;
+	padding-top:8px;
+	padding-bottom: 8px;
+}
+
+#messageSubTitle {
+	padding-top: 5px;
+	padding-left : 35px;
+	font-size: 9pt;
+	text-align: left;
+}
+
+tr.odd {
+	background-color: #ddd;
+}
+
+tr.eventTitle {
+	font-weight : bold;
+	border : 1px solid #000000;
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: #DDDDDD;
+}	
+
+table.dates {
+	background-color: #ddd;
+	border-collapse: collapse;
+}
+
+.date {
+	border-left : 2px solid #fff;	
+	border-bottom : 2px solid #fff;
+	border-collapse: collapse;
+	padding: 3px;
+}
+
+.match {
+	background-color : #afa;
+	border-left : 2px solid #fff;	
+	border-bottom : 2px solid #fff;
+	border-collapse: collapse;
+	padding: 3px;
+}
+
+#eventForm {
+	padding: 10px;
+}
+
+#events {
+
+}
+
+
+#calendarContainer {
+	border:2px solid #999;
+}
+.cal {
+	font-size:11px;
+	background-color:#CCC;
+	text-align:center;
+	border:0;
+}
+
+.cal img {
+	border:0;
+}
+.cal button{
+	border:0;
+	background-color:#CCC;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+        width:auto;
+}
+.cal button.today { 
+	color:#3769F2;
+	font-weight:bold;
+}
+.cal button.selected { border:1px solid #000; }
+
+.dow {
+	background-color:#000;
+	color:#FFF;
+	font-weight:normal;
+}
+
+.dow td {
+	width:18px;
+}
+thead {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+thead button {
+	font-size:.7em;
+}

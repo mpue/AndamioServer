@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Config" table="CONFIG">
+		
+		<id name="id" column="CONFIG_ID">
+			<generator class="increment"/>
+		</id>
+			
+		<property name="hostname" column="HOSTNAME"/>		
+		<property name="localPath" column="LOCALPATH"/>		
+		<property name="smtphost" column="SMTPHOST"/>
+		<property name="fromadress" column="FROMADRESS"/>
+		<property name="username" column="USERNAME"/>		
+		<property name="password" column="PASSWORD"/>
+		<property name="importpath" column="IMPORTPATH"/>
+		<property name="imagepath" column="IMAGEPATH"/>	
+		<property name="downloadpath" column="DOWNLOADPATH"/>	
+		<property name="imageurl" column="IMAGEURL"/>			
+		<property name="keywords" column="KEYWORDS"/>
+		<property name="basepath" column="BASEPATH"/>				
+		<property name="gallerypath" column="GALLERYPATH"/>	
+		<property name="productimagepath" column="PRODUCTIMAGEPATH"/>			
+		<property name="sitename" column="SITENAME"/>			
+		<property name="template" column="TEMPLATE"/>		
+		<property name="startnode" column="STARTNODE"/>		
+		<property name="admintemplate" column="ADMINTEMPLATE"/>	
+		<property name="contentpath" column="CONTENTPATH"/>					
+		<property name="maxAvatarHeight" column="MAXAVATARHEIGHT"/>		
+		<property name="maxAvatarWidth" column="MAXAVATARWIDTH"/>		
+		<property name="maxImageUploadSize" column="MAXIMAGEUPLOADSIZE"/>		
+		<property name="maxFileUploadSize" column="MAXFILEUPLOADSIZE"/>			
+		<property name="maintenanceMode" column="MAINTENANCE"/>
+						
+	</class>
+	
+</hibernate-mapping>

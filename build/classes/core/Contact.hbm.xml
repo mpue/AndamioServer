@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Contact" table="CONTACT">
+		
+		<id name="id" column="CONTACT_ID" >
+			<generator class="increment" />
+		</id>
+
+		<property name="firstname" column="FIRSTNAME"/>
+		<property name="lastname" column="LASTNAME"/>		
+		<property name="title" column="TITLE"/>
+		<property name="company" column="COMPANY"/>
+		<property name="phone" column="PHONE"/>
+		<property name="email" column="EMAIL"/>
+		<property name="website" column="WEBSITE"/>
+		<property name="adress" column="ADRESS"/>
+		<property name="city" column="CITY"/>
+		<property name="letterSalutation" column="SALUTATION"/>
+		<property name="created" type="timestamp" column="CREATED"/>
+		<property name="lastChange" type="timestamp" column="LASTCHANGE"/>
+		<property name="dateOfBirth" type="timestamp" column="DATEOFBIRTH"/>
+		<property name="note" column="NOTE" type="text"/>
+				 
+	</class>
+	
+</hibernate-mapping>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.calendar.Appointment" table="APPOINTMENT">
+		
+		<id name="id" column="APPOINTMENT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="shortDescription" column="SHORTDESCRIPTION" />
+		<property name="longDescription" column="LONGDESCRIPTION" type="text"/>
+		<property name="color" column="COLOR" type="text"/>
+		<property name="start" column="START" type="timestamp" />	
+		<property name="end" column="END" type="timestamp"/>		
+		
+		<many-to-one name="calendar" column="CALENDAR_ID" not-null="true"/>
+		
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Download" table="DOWNLOAD">
+		
+		<id name="id" column="DOWNLOAD_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="name" column="NAME" />		
+		<property name="description" type="text" column="DESCRIPTION" />
+		<property name="ranking" column="RANKING"/>
+		<property name="hits" column="HITS"/>
+		<property name="path" column="PATH" />	
+		<property name="filename" column="FILENAME" />		
+		<property name="uploader" column="UPLOADER" />
+		<property name="uploadTime" type="timestamp" column="UPLOADTIME" />
+		<property name="tags" column="TAGS"/>
+		<property name="publicfile" column="PUBLICFILE"/>
+		<property name="mimetype" column="MIMETYPE"/>
+		<property name="filesize" column="FILESIZE"/>
+		<property name="author" column="AUTHOR"/>
+		<property name="license" column="LICENSE"/>
+		<property name="contributors" column="CONTRIBUTORS"/>
+		<property name="downloads" column="DOWNLOADS"/>
+		<property name="downloadable" column="DOWNLOADABLE"/>
+		<property name="domain" column="DOMAIN"/>
+		
+        <set name="categories" 
+             table="link_download_categories" 
+             lazy="false">
+            <key column="DOWNLOAD_ID"/>
+            <many-to-many 
+                class="org.pmedv.pojos.DownloadCategory"
+                column="CATEGORY_ID"/>
+        </set>      
+		
+	</class>
+	
+</hibernate-mapping>

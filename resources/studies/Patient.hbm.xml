@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.iomedico.dataaccess.objects.Patient" table="PATIENT">
+		
+		<id name="id" column="PATIENT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="birthDate" column="BIRTHDATE"/>
+		<property name="randomNumber" column="RANDOMNUMBER"/>
+		<property name="treatmentStartDate" column="TREATMENTSTART"/>
+		<property name="treatmentEnd" column="TREATMENTEND"/>
+		<property name="lastDocumentation" column="LASTDOCUMENTATION"/>
+		<property name="csiParticipant" column="CSIPARTICIPANT"/>
+		<property name="therapyConform" column="THERAPYCONFORM"/>		
+		<property name="insuranceId" column="INSURANCE_ID"/>
+		<property name="startDose" column="STARTDOSE"/>
+		<property name="weight" column="WEIGHT"/>
+		<property name="currentDose" column="CURRENTDOSE"/>
+		<property name="processed" column="PROCESSED"/>
+		<property name="center" column="CENTER"/>
+		<property name="registrationDate" column="REGISTERDATE"/>
+		<property name="paid" column="PAID"/>
+		<property name="paidamount" column="PAIDAMOUNT"/>
+		
+		<many-to-one name="doctor" column="DOCTOR_ID" not-null="true"/>
+
+	</class>
+	
+</hibernate-mapping>

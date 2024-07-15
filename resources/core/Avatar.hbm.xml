@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Avatar" table="AVATAR">
+		
+		<id name="id" column="AVATAR_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="description" column="DESCRIPTION" />
+		<property name="path" column="PATH" />	
+		<property name="filename" column="FILENAME" />		
+		<property name="defaultImage" column="DEFAULTIMAGE" />
+		
+		<many-to-one name="user" column="USER_ID" not-null="true"/>
+		
+	</class>
+	
+</hibernate-mapping>

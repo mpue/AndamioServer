@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+
+
+<page>
+	<table width="90%" border="1">
+		<row>
+			<column align="right">
+				Data
+			</column>
+		</row>		
+	</table>
+</page>

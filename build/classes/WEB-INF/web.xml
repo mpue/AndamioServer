@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+  PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<display-name>andamio</display-name>
+	
+	<context-param>
+		<param-name>org.apache.activemq.brokerURL</param-name>
+		<param-value>tcp://localhost:61619</param-value>
+		<description>The URL of the Message Broker to connect to</description>
+	</context-param>
+	
+	
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+		<init-param>
+			<param-name>logLevel</param-name>
+			<param-value>WARN</param-value>
+		</init-param>
+	</filter>
+	 <filter>
+	   <filter-name>Charset Filter</filter-name>
+	   <filter-class>org.pmedv.cms.filter.CharsetFilter</filter-class>
+	     <init-param>
+	       <param-name>requestEncoding</param-name>
+	       <param-value>UTF-8</param-value>
+	     </init-param>
+	 </filter>
+	<filter>
+	  <filter-name>springSecurityFilterChain</filter-name>
+	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>	
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 <filter-mapping>
+	   <filter-name>Charset Filter</filter-name>
+	   <url-pattern>/*</url-pattern>
+	 </filter-mapping>
+	
+	<!-- 
+	<filter>
+		<filter-name>SessionFilter</filter-name>
+		<filter-class>org.pmedv.session.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	
+	<!-- 
+	<listener>
+		<listener-class>org.pmedv.session.SessionListener</listener-class>
+	</listener>
+ 	-->
+ 	
+ 	<listener>
+        <listener-class>org.pmedv.servlets.FileUploadListener</listener-class>
+    </listener>
+	
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts-config.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>	
+	<servlet>
+	  <servlet-name>context</servlet-name>
+	  <servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+	  <load-on-startup>1</load-on-startup>
+	</servlet>	
+	<servlet>
+		<servlet-name>AjaxServlet</servlet-name>
+		<servlet-class>org.apache.activemq.web.AjaxServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>authenticationExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>galleryServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>templateServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>nodeServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>configServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fileServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>attributeServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>userServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>usergroupServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>pluginServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>contactServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>countryServiceExporter</servlet-name>
+		<servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PhpServlet</servlet-name>
+		<servlet-class>org.pmedv.servlets.PhpServlet</servlet-class>
+		
+		<init-param>
+        	<param-name>php.executable</param-name>
+			<!-- 
+			Enter the full qualified path to your php executable here 
+			e.g. c:/Programme/php/php.exe
+            
+            For php5 on windows please use the php-cgi.exe!
+			--> 
+        	<param-value>c:/devel/php-4.4.9/php.exe</param-value>
+        	<!-- <param-value>/usr/bin/php5-cgi</param-value> -->
+    	</init-param>
+
+		<!-- 
+		Configures if phpservlet accepts the multipart formdata 
+		encoding (file upload). Set to true if you want to accept it.
+		-->
+   		<init-param>
+        	<param-name>php.use.multipart.formdata</param-name>
+        	<param-value>true</param-value>
+    	</init-param>
+   		
+		<!-- 
+		Seems that PHP 4.3 on Win32 needs this environment variable
+		to connect to MySql. Uncomment this if you have problems with 
+		php and mysql on windows. (set to: c:/winnt/ if needed.)
+		<init-param>
+        	<param-name>SystemRoot</param-name>
+        	<param-value>c:/windows/</param-value>
+    	</init-param>
+		-->
+		
+		<!-- 
+		Any servlet parameter that does not start with "php" is passed
+		to php as environment variable. If the value is a Java-System-Property,
+		the value of this property is given to php; else the value string as is is
+		passed to php.
+		The example shows how to pass the PATH - environment variable to php. PATH is
+		stored in the Java-System-Variable "java.library.path". 
+   		<init-param>
+        	<param-name>PATH</param-name>
+        	<param-value>java.library.path</param-value>
+    	</init-param>
+		-->
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<display-name>UploadServlet</display-name>
+		<description></description>
+		<servlet-class>org.pmedv.servlets.UploadServlet</servlet-class>
+	</servlet>	  
+	<servlet>
+        <servlet-name>AsyncUploadServlet</servlet-name>
+        <display-name>AsyncUploadServlet</display-name>
+        <description></description>
+        <servlet-class>org.pmedv.servlets.AsyncUploadServlet</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>ScriptServlet</servlet-name>
+		<display-name>ScriptServlet</display-name>
+		<description></description>
+		<servlet-class>org.pmedv.servlets.ScriptServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FormulaServlet</servlet-name>
+		<display-name>FormulaServlet</display-name>
+		<description></description>
+		<servlet-class>org.pmedv.servlets.FormulaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Captcha</servlet-name>
+		<display-name>Captcha</display-name>
+		<servlet-class>nl.captcha.servlet.CaptchaServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AjaxServlet</servlet-name>
+		<url-pattern>/chat/amq/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>authenticationExporter</servlet-name>
+		<url-pattern>/remoting/AuthenticationService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>galleryServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteGalleryService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>templateServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteTemplateService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>nodeServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteNodeService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>configServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteConfigService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fileServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteFileService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>attributeServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteAttributeService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>userServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteUserService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>usergroupServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteUsergroupService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>pluginServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemotePluginService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>contactServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteContactService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>countryServiceExporter</servlet-name>
+		<url-pattern>/remoting/RemoteCountryService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>PhpServlet</servlet-name>
+    	<url-pattern>*.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>    
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>AsyncUploadServlet</servlet-name>
+        <url-pattern>/AsyncUpload</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ScriptServlet</servlet-name>
+		<url-pattern>/ScriptServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FormulaServlet</servlet-name>
+		<url-pattern>/FormulaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Captcha</servlet-name>
+		<url-pattern>/captcha.jpg</url-pattern>
+	</servlet-mapping>
+
+	<!-- WebDAV, you need to configure your tomcat security, before activating!!! -->
+
+	<!--
+	<servlet>
+		<servlet-name>webdav</servlet-name>
+		<servlet-class>org.apache.catalina.servlets.WebdavServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>listings</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>readonly</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>webdav</servlet-name>
+		<url-pattern>/webdav/*</url-pattern>
+	</servlet-mapping>	
+	-->
+	
+	<!-- The Usual Welcome File List -->
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/admin/errorpages/error500.jsp</location>
+	</error-page>
+
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/admin/errorpages/error404.jsp</location>
+	</error-page>
+
+	<!-- Struts Tag Library Descriptors -->
+	
+	<taglib>
+		<taglib-uri>/tags/struts-bean</taglib-uri>
+		<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>/tags/struts-html</taglib-uri>
+		<taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>/tags/struts-logic</taglib-uri>
+		<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>/tags/struts-nested</taglib-uri>
+		<taglib-location>/WEB-INF/struts-nested.tld</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>/tags/struts-tiles</taglib-uri>
+		<taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/iconbar-displayer</taglib-uri>
+		<taglib-location>/WEB-INF/iconbar-displayer.tld</taglib-location>
+	</taglib>		
+	<taglib>
+		<taglib-uri>/tags/buttonbar-displayer</taglib-uri>
+		<taglib-location>/WEB-INF/buttonbar-displayer.tld</taglib-location>
+	</taglib>		
+	<taglib>
+		<taglib-uri>/tags/userlist-displayer</taglib-uri>
+		<taglib-location>/WEB-INF/userlist-displayer.tld</taglib-location>
+	</taglib>	
+	<taglib>
+		<taglib-uri>/tags/pagetags</taglib-uri>
+		<taglib-location>/WEB-INF/pagetags.tld</taglib-location>
+	</taglib>	
+	
+
+	  
+	<!-- Security constraints for the upload servlet -->
+
+ 	<!--
+ 
+	<security-constraint>
+
+		<web-resource-collection>
+			<web-resource-name>
+				Administration
+	        </web-resource-name>	
+			<url-pattern>
+				/admin/*       
+			</url-pattern>
+			<http-method>
+				GET
+	        </http-method>
+			<http-method>
+				POST
+	        </http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>
+				manager
+	    	</role-name>
+		</auth-constraint>
+
+	</security-constraint>
+	
+	 
+	<login-config>
+		<auth-method>
+			BASIC       
+		</auth-method>
+		
+		<realm-name>
+			WeberknechtCMS     
+		</realm-name>
+	</login-config>
+
+	<security-role>
+		<role-name>
+			manager
+    	</role-name>
+	</security-role>
+	
+	<security-constraint>
+
+		<web-resource-collection>
+			<web-resource-name>
+				AdminAction
+	        </web-resource-name>
+	
+			<url-pattern>
+				/admin/AdminAction.do            
+			</url-pattern>
+			<http-method>
+				GET
+	        </http-method>
+			<http-method>
+				POST
+	        </http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>
+				manager
+	    	</role-name>
+		</auth-constraint>
+
+	</security-constraint>
+	
+	<security-constraint>
+
+		<web-resource-collection>
+			<web-resource-name>
+				Attachments
+	        </web-resource-name>
+	
+			<url-pattern>
+				/attachments/*        
+			</url-pattern>
+			<http-method>
+				GET
+	        </http-method>
+			<http-method>
+				POST
+	        </http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>
+				manager
+	    	</role-name>
+		</auth-constraint>
+
+	</security-constraint>	
+	  -->
+
+ 	
+</web-app>
+

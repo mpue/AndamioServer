@@ -1,0 +1,559 @@
+
+body {
+       margin: 4px;
+       font-family: Verdana, arial, helvetica, sans;
+       font-size: 11px;
+       color: #000;
+       /*background: white;*/
+}
+td { 
+       font-family: Verdana, arial, helvetica, sans;
+       font-size: 11px; 
+}
+
+
+tr.patientsListHeader {
+	background: #39387b;
+	/*padding: 1px 5px 1px 5px;*/
+}
+
+th.reportPadding {
+	padding: 1px 5px 1px 5px;
+}
+
+a.patientsListHeader {
+	font-size: 10px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+tr.patientsListRowWhite {
+	background: #fff;
+}
+        
+tr.patientsListRowGray {
+	background: #f0f2f4;
+}
+
+td.patientsListRow {
+	font-size: 10px;
+	color:#606060;
+	font-weight:normal;
+	padding: 1px 2px 1px 2px;
+}
+
+td.patientsListRowOutOfDate {
+	font-size: 10px;
+	color:#f69731;
+	font-weight:normal;
+	padding: 1px 2px 1px 2px;
+}
+
+div#language_chooser { 
+  margin:5px;
+  font-size: 11px;
+  color: #fff;
+}
+div#maincontent { 
+  margin-top:0px;
+  margin-left:5px;
+  margin-right:30px;
+}
+div#leftboxlist { 
+  margin-top:10px;
+  margin-left:30px;
+}
+h1 {
+     font-size: 15px;
+     color: #39387b;
+     font-weight:bold;
+     margin-top:10px;
+     margin-bottom:10px;
+     padding:0px;
+}
+h2 {
+     font-size: 12px;
+     color: #39387b;
+     font-weight:bold;
+     margin-top:10px;
+     margin-bottom:10px;
+     padding:0px;
+}
+h3 {
+     font-size: 12px;
+     color: #606060;
+     font-weight:bold;
+     margin-top:4px;
+     margin-bottom:4px;
+     padding:0px;
+}
+h4 {
+     font-size: 12px;
+     color: #606060;
+     font-weight:bold;
+     margin-top:2px;
+     margin-bottom:2px;
+     padding:0px;
+}
+div.leftbox {
+        color:#606060;
+	font-size: 11px;
+        margin: 5px;
+        padding:0px;
+}
+
+div.category {
+	background-color : #bbbbbb;
+        color:#39387b;
+	font-size: 11px;
+        margin: 5px;
+        padding:0px;
+}
+
+
+div.subleftbox {
+        margin-left: 11px;
+        margin-top:-2px;
+	    margin-bottom:5px;
+}
+
+span.selected
+{
+        color:#f69731;
+}
+.lb_title {
+        color:#ffffff;
+	font-size: 10px;
+	text-transform: uppercase;
+        margin: 0px 0px 0px 5px;
+}
+span.spamfilter { display:none; }
+li > p { 
+        margin:0px;
+        margin-top:2px;
+        padding:0px;
+}
+div.leftbox a {
+	font-size: 10px;
+        color:#606060;
+        font-weight:normal;
+}
+div.attribute-image p { 
+        margin:0px;
+        padding:0px;
+}
+div.attribute-link p { 
+        margin:0px;
+        padding:0px;
+        /*
+        margin-top:-3px;
+	    margin-bottom:-3px;
+	    */
+}
+
+div.leftbox h4 {
+     font-size: 11px;
+     color: #606060;
+     font-weight:bold;
+     margin-top:2px;
+     margin-bottom:2px;
+     padding:0px;
+}
+div.imageleft { 
+        float: left;
+        margin-right: 10px;
+}
+#breadcrumb {
+	font-size: 10px;
+	color: #39387b;
+        font-weight:normal;
+        margin-left:5px;
+}
+#breadcrumb a {
+	font-size: 10px;
+	color: #39387b;
+        font-weight:normal;
+}
+a {
+	color: #39387b;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+a.login {
+        font-size: 13px;
+        color: #f69731;
+        text-decoration: none;
+}
+
+a.login:hover {
+        text-decoration: underline;
+}
+
+img { 
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+form { 
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+ul { 
+  margin:0px 0px 10px 0px;
+  padding:0px;
+}
+ul li { 
+     margin-left: 15px;
+     list-style-image: url('/StudiesPortal/html/images/dot.png');
+}
+
+.referenzen {
+     vertical-align:middle;
+     padding-left:0px;
+}
+
+.referenzen_bild {
+     padding-bottom:0px;
+     width:125px;
+}
+
+
+.imageright { 
+             float: right;
+             margin-left: 15px;
+}
+
+.content-view-line > .class-image > .content-image { 
+                 float: left;
+                 margin-right:15px;
+}
+.content-view-line { clear:both; }
+.content-navigator-previous { display:inline; }
+.content-navigator-previous-disabled { display:inline; }
+.content-navigator-next { display:inline; }
+.content-navigator-next-disabled { display:inline; }
+.content-navigator-arrow { display:inline; }
+.content-navigator-separator { display:inline; }
+.content-navigator-separator-disabled { display:inline; }
+.content-navigator-forum-link { display:inline; }
+.content-navigator { margin-bottom: 15px; }
+.content-view-full .attribute-caption  { margin-top: 15px; }
+
+div#maincontent2 {
+	text-align: left;
+  	margin-top:0px;
+  	margin-left:5px;
+  	margin-right:30px;
+}
+
+.messages {
+	border: 1px solid rgb(0, 0, 0); 
+	border-collapse: collapse; 
+	font-family: Arial; 
+	font-size: 12px;
+	padding : 5px;
+	background-color: #dddddd;
+	width: 90%;
+	text-align: center;
+	margin-left: auto ;
+  	margin-right: auto ;
+	 
+	
+}
+
+div.content {
+	padding-left: 30px;	
+	width: 90%;
+	text-align: left;
+}
+
+div.heading {
+	padding-left: 25px;
+	text-align: left;
+}
+
+div#loginbox {
+   position: absolute;
+   top:95px;
+   left:52%;
+   padding:0px;
+   width:450px;
+   padding-left:0px;
+   font-size:100%;
+   text-align: right;
+   background-color:#d6e3f4;
+   margin-bottom: 5px;
+   padding-top:2px;
+   padding-bottom:5px;
+}
+
+div#logoutbox {
+   position: absolute;
+   top:95px;
+   left:57%;
+   padding:0px;
+   width:350px;
+   padding-left:0px;
+   font-size:100%;
+   text-align: left;
+   background-color:#d6e3f4;
+   margin-bottom: 5px;
+   padding-top:2px;
+   padding-bottom:5px;
+}
+
+div#lostPassword {
+   position: absolute;
+   top:150px;
+   left:68%;
+   padding:0px;
+   width:230px;
+   padding-left:0px;
+   font-size: 8pt;
+   text-align: center;
+   background-color: transparent;
+   margin-bottom: 5px;
+   padding-top:2px;
+   padding-bottom:5px;
+}
+
+div#languages {
+	position:absolute;top:1.0em;left : 77%;
+}
+
+a.language {
+	color : #ffffff;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+span.languageBar {
+	color : #ffffff;
+	font-weight: bold;	
+}
+
+table.menu {
+	width : 100%;
+}
+
+.study_thin {
+	border: 1px solid #000000; border-collapse: collapse;
+}
+
+tr.category {
+	background-color : #DDDDDD;
+	vertical-align: middle;
+	height: 30px;		
+}
+
+tr.category:hover {
+	background-color : #FFFFFF;
+}
+
+
+a.category {
+	margin-top : 10px;
+	padding : 5px;
+	
+}
+
+a.category_sitesneeded {
+	margin-top : 10px;
+	padding-top : 5px;
+	padding-left : 20px;
+	background-image: url("../images/16x16_notice.png");
+	background-position: left center;
+	background-repeat: no-repeat;
+	margin-left: 5px;
+	margin-top: 5px;
+
+}
+
+a.study {
+	padding-left : 10px;
+}
+
+a.study_sitesneeded {
+	background-image: url("../images/16x16_notice.png");
+	background-position: left center;
+	background-repeat: no-repeat;		
+	padding-left : 20px;
+	margin-left : 10px;
+}
+
+a.studyitem {
+	padding-left : 25px;
+	font-size: 10px;
+}
+
+
+tr.odd {
+	background-color: #AAAAAA;
+}
+
+td.category_0 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_1 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_2 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_3 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_4 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_5 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+td.category_6 {
+	vertical-align: middle;
+	border-bottom : 1px solid #AAAAAA;
+}
+
+div#footer {
+	position : absolute;
+	left : 45%;
+	color: #ffffff;
+	font-size: 8pt;
+	font-style: italic;
+}
+
+a.footer {
+	color: #ffffff;
+	font-size: 8pt;
+	font-style: italic;
+	padding-left : 320px;
+}
+
+table.studyOverview {
+	width: 99%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.studyItem_16, td.studyItem_17, td.studyItem_25, td.studyItem_30, td.studyItem_31, td.studyItem_33, td.studyItem_141,
+td.studyItem_142, td.studyItem_143, td.studyItem_154, td.studyItem_155, td.studyItem_158, td.studyItem_174 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/default.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+td.studyItem_27, td.studyItem_32, td.studyItem_34, td.studyItem_136, td.studyItem_139, td.studyItem_148,
+td.studyItem_156, td.studyItem_162 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/tumorregister.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}	
+
+td.studyItem_140 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/carin.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_147 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/celavie.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_157 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/aio.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_160 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/paso.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_165 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/be1st.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_170 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/piaza.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_175 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/reason.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.studyItem_176 {
+	text-align: center;
+	vertical-align: middle;		
+	height : 48px;
+	width : 220px;
+	padding-top : 80px;
+	background-image: url(../../../images/studyIcons/hexafil.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}

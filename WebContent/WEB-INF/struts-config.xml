@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+    <form-beans>
+
+        <form-bean
+            name="AdminPanelForm"
+            type="org.pmedv.forms.AdminPanelForm" />
+
+        <form-bean
+            name="InstallForm"
+            type="org.pmedv.forms.InstallForm" />
+
+        <form-bean
+            name="SiteRequestForm"
+            type="org.pmedv.forms.SiteRequestForm" />
+
+        <form-bean
+            name="UserForm"
+            type="org.pmedv.forms.UserForm" />
+
+        <form-bean
+            name="UserProfileForm"
+            type="org.pmedv.forms.UserProfileForm" />
+
+        <form-bean
+            name="UserCommentForm"
+            type="org.pmedv.forms.UserCommentForm" />
+
+        <form-bean
+            name="UserListForm"
+            type="org.pmedv.forms.UserListForm" />
+
+        <form-bean
+            name="UserShowForm"
+            type="org.pmedv.forms.UserShowForm" />
+
+        <form-bean
+            name="NodeListForm"
+            type="org.pmedv.forms.NodeListForm" />
+
+        <form-bean
+            name="NodeForm"
+            type="org.pmedv.forms.NodeForm" />
+
+        <form-bean
+            name="NodeShowForm"
+            type="org.pmedv.forms.NodeShowForm" />
+
+        <form-bean
+            name="NodegroupAddForm"
+            type="org.pmedv.forms.NodegroupAddForm" />
+
+        <form-bean
+            name="ConfigForm"
+            type="org.pmedv.forms.ConfigForm" />
+
+        <form-bean
+            name="ConfigShowForm"
+            type="org.pmedv.forms.ConfigShowForm" />
+
+        <form-bean
+            name="UploadForm"
+            type="org.pmedv.forms.UploadForm" />
+
+        <form-bean
+            name="FileUploadForm"
+            type="org.pmedv.forms.FileUploadForm" />
+
+        <form-bean
+            name="GImageForm"
+            type="org.pmedv.forms.GImageForm" />
+
+        <form-bean
+            name="GImageShowForm"
+            type="org.pmedv.forms.GImageShowForm" />
+
+        <form-bean
+            name="DirectoryListForm"
+            type="org.pmedv.forms.DirectoryListForm" />
+
+        <form-bean
+            name="ContentForm"
+            type="org.pmedv.forms.ContentForm" />
+
+        <form-bean
+            name="ContentListForm"
+            type="org.pmedv.forms.ContentListForm" />
+
+        <form-bean
+            name="ContentShowForm"
+            type="org.pmedv.forms.ContentShowForm" />
+
+        <form-bean
+            name="LoginForm"
+            type="org.pmedv.forms.LoginForm" />
+
+        <form-bean
+            name="LogoutForm"
+            type="org.pmedv.forms.LogoutForm" />
+
+        <form-bean
+            name="MainpageForm"
+            type="org.pmedv.forms.MainpageForm" />
+
+        <form-bean
+            name="SiteContactForm"
+            type="org.pmedv.forms.SiteContactForm" />
+
+        <form-bean
+            name="GalleryForm"
+            type="org.pmedv.forms.GalleryForm" />
+
+        <form-bean
+            name="GalleryListForm"
+            type="org.pmedv.forms.GalleryListForm" />
+
+        <form-bean
+            name="GalleryShowForm"
+            type="org.pmedv.forms.GalleryShowForm" />
+
+        <form-bean
+            name="FileForm"
+            type="org.pmedv.forms.FileForm" />
+
+        <form-bean
+            name="UsergroupForm"
+            type="org.pmedv.forms.UsergroupForm" />
+
+        <form-bean
+            name="UsergroupListForm"
+            type="org.pmedv.forms.UsergroupListForm" />
+
+        <form-bean
+            name="UsergroupShowForm"
+            type="org.pmedv.forms.UsergroupShowForm" />
+
+        <form-bean
+            name="UsergroupAddForm"
+            type="org.pmedv.forms.UsergroupAddForm" />
+
+        <form-bean
+            name="ProcessForm"
+            type="org.pmedv.forms.ProcessForm" />
+
+        <form-bean
+            name="ProcessListForm"
+            type="org.pmedv.forms.ProcessListForm" />
+
+        <form-bean
+            name="ProcessShowForm"
+            type="org.pmedv.forms.ProcessShowForm" />
+
+        <form-bean
+            name="ProcessgroupAddForm"
+            type="org.pmedv.forms.ProcessgroupAddForm" />
+
+        <form-bean
+            name="AvatarForm"
+            type="org.pmedv.forms.AvatarForm" />
+
+        <form-bean
+            name="PluginListForm"
+            type="org.pmedv.forms.PluginListForm" />
+
+        <form-bean
+            name="DownloadForm"
+            type="org.pmedv.forms.DownloadForm" />
+
+        <form-bean
+            name="DownloadListForm"
+            type="org.pmedv.forms.DownloadListForm" />
+
+        <form-bean
+            name="DownloadShowForm"
+            type="org.pmedv.forms.DownloadShowForm" />
+
+        <form-bean
+            name="RegistrationForm"
+            type="org.pmedv.forms.RegistrationForm" />
+
+        <form-bean
+            name="TreeForm"
+            type="org.pmedv.forms.TreeForm" />
+
+        <form-bean
+            name="JobForm"
+            type="org.pmedv.forms.JobForm" />
+
+        <form-bean
+            name="ForumForm"
+            type="org.pmedv.forms.forums.ForumForm" />
+
+        <form-bean
+            name="ForumListForm"
+            type="org.pmedv.forms.forums.ForumListForm" />
+
+        <form-bean
+            name="ForumShowForm"
+            type="org.pmedv.forms.forums.ForumShowForm" />
+
+        <form-bean
+            name="ForumMainpageForm"
+            type="org.pmedv.forms.forums.ForumMainpageForm" />
+
+        <form-bean
+            name="CategoryForm"
+            type="org.pmedv.forms.forums.CategoryForm" />
+
+        <form-bean
+            name="CategoryShowForm"
+            type="org.pmedv.forms.forums.CategoryShowForm" />
+
+        <form-bean
+            name="ThreadForm"
+            type="org.pmedv.forms.forums.ThreadForm" />
+
+        <form-bean
+            name="PostingForm"
+            type="org.pmedv.forms.forums.PostingForm" />
+
+        <form-bean
+            name="UserMailboxForm"
+            type="org.pmedv.forms.UserMailboxForm" />
+
+        <form-bean
+            name="DoctorForm"
+            type="org.pmedv.forms.DoctorForm" />
+    </form-beans>
+
+    <!-- ========================================= Global Exception Definitions -->
+
+    <global-exceptions>
+
+        <!--
+        sample exception handler
+        <exception
+            key="expired.password"
+            type="app.ExpiredPasswordException"
+            path="/changePassword.jsp"/>
+        end sample
+        -->
+    </global-exceptions>
+
+    <!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+
+        <forward
+            name="showUserList"
+            path="/admin/ListUsers.do?do=list" />
+
+        <forward
+            name="showNodeList"
+            path="/admin/ListNodes.do" />
+
+        <forward
+            name="showDirectoryList"
+            path="/admin/ListDirectories.do" />
+
+        <forward
+            name="showContentList"
+            path="/admin/ListContents.do" />
+
+        <forward
+            name="showConfig"
+            path="/admin/ShowConfig.do" />
+
+        <forward
+            name="mainModule"
+            path="/admin/index.jsp" />
+
+        <forward
+            name="uploadFile"
+            path="/admin/UploadFile.jsp" />
+
+        <forward
+            name="mainpage"
+            path="/content/mainpage.do" />
+
+        <forward
+            name="LoginDialog"
+            path="/admin/LoginDialog.do" />
+
+        <forward
+            name="Logout"
+            path="/admin/Logout.do" />
+
+        <forward
+            name="sendContactSuccess"
+            path="/sendContactSuccess.jsp" />
+
+        <forward
+            name="sendSiteContactSuccess"
+            path="/sendSiteContactSuccess.jsp" />
+
+        <forward
+            name="showGalleryList"
+            path="/admin/ListGalleries.do" />
+
+        <forward
+            name="showUsergroupList"
+            path="/admin/ListUsergroups.do?do=list" />
+
+        <forward
+            name="showProcessList"
+            path="/admin/ListProcesses.do" />
+
+        <forward
+            name="showAdminPanel"
+            path="/admin/Mainpage.do" />
+
+        <forward
+            name="showShopList"
+            path="/admin/ListShops.do" />
+    </global-forwards>
+
+    <!-- =========================================== Action Mapping Definitions -->
+
+    <action-mappings>
+
+        <!-- Admin actions -->
+
+        <action
+            name="AdminPanelForm"
+            attribute="AdminPanelForm"
+            input="/admin/administration.jsp"
+            path="/admin/Mainpage"
+            scope="request"
+            type="org.pmedv.actions.AdministrationAction"
+            validate="false" >
+
+            <forward
+                name="showAdminPanel"
+                path="/admin/administration.jsp" />
+        </action>
+
+        <action
+            name="InstallForm"
+            attribute="InstallForm"
+            parameter="do"
+            path="/admin/Install"
+            scope="request"
+            type="org.pmedv.actions.InstallationAction"
+            validate="false" >
+
+            <forward
+                name="installSuccess"
+                path="/admin/initialCreate.jsp" />
+
+            <forward
+                name="installConfig"
+                path="/admin/configuration.jsp" />
+        </action>
+
+        <action
+            name="UserForm"
+            input="/admin/createUser.jsp"
+            path="/admin/CreateUser"
+            scope="request"
+            type="org.pmedv.actions.UserAction"
+            validate="true" >
+
+            <forward
+                name="createUserSuccess"
+                path="/admin/createUserSuccess.jsp" />
+        </action>
+
+        <action
+            name="UserListForm"
+            attribute="UserListForm"
+            input="/admin/showUserList.jsp"
+            parameter="do"
+            path="/admin/ListUsers"
+            scope="request"
+            type="org.pmedv.actions.UserListAction"
+            validate="false" >
+
+            <forward
+                name="showUserList"
+                path="/admin/showUserList.jsp" />
+        </action>
+
+        <action
+            name="UserShowForm"
+            attribute="UserShowForm"
+            input="/admin/showUserDetails.jsp"
+            parameter="do"
+            path="/admin/ShowUser"
+            scope="request"
+            type="org.pmedv.actions.UserShowAction"
+            validate="false" >
+
+            <forward
+                name="showUserDetails"
+                path="/admin/showUserDetails.jsp" />
+        </action>
+
+        <action
+            name="NodeForm"
+            input="/admin/createNode.jsp"
+            path="/admin/CreateNode"
+            scope="request"
+            type="org.pmedv.actions.NodeAction"
+            validate="true" >
+        </action>
+
+        <action
+            name="NodeForm"
+            input="/admin/createNode.jsp"
+            path="/admin/CreateLink"
+            scope="request"
+            type="org.pmedv.actions.LinkAction"
+            validate="false" >
+        </action>
+
+        <action
+            name="NodeListForm"
+            attribute="NodeListForm"
+            input="/admin/showNodeList.jsp"
+            path="/admin/ListNodes"
+            scope="request"
+            type="org.pmedv.actions.NodeListAction"
+            validate="false" >
+
+            <forward
+                name="showNodeList"
+                path="/admin/showNodeList.jsp" />
+        </action>
+
+        <action
+            name="NodeShowForm"
+            attribute="NodeShowForm"
+            input="/admin/showNodeDetails.jsp"
+            parameter="do"
+            path="/admin/ShowNode"
+            scope="request"
+            type="org.pmedv.actions.NodeShowAction"
+            validate="false" >
+
+            <forward
+                name="showNodeDetails"
+                path="/admin/showNodeDetails.jsp" />
+        </action>
+
+        <action
+            name="ConfigShowForm"
+            attribute="ConfigShowForm"
+            input="/admin/showConfig.jsp"
+            parameter="do"
+            path="/admin/ShowConfig"
+            scope="request"
+            type="org.pmedv.actions.ConfigAction"
+            validate="false" >
+
+            <forward
+                name="showConfig"
+                path="/admin/configEditor.jsp" />
+        </action>
+
+        <action
+            name="UploadForm"
+            input="/admin/UploadFile.jsp"
+            parameter="do"
+            path="/admin/UploadFile"
+            scope="request"
+            type="org.pmedv.actions.UploadAction"
+            validate="true" >
+
+            <forward
+                name="uploadFile"
+                path="/admin/UploadFile.jsp" />
+
+            <forward
+                name="importNodes"
+                path="/admin/importFile.jsp" />
+
+            <forward
+                name="importODT"
+                path="/admin/importODT.jsp" />
+        </action>
+
+        <action
+            name="FileUploadForm"
+            input="/upload/upload.jsp"
+            parameter="do"
+            path="/upload/FileUpload"
+            scope="request"
+            type="org.pmedv.actions.FileUploadAction"
+            validate="true" >
+
+            <forward
+                name="upload"
+                path="/upload/upload.jsp" />
+
+            <forward
+                name="success"
+                path="/upload/success.jsp" />
+        </action>
+
+        <action
+            name="GImageForm"
+            input="/admin/createGImage.jsp"
+            path="/admin/CreateGImage"
+            scope="request"
+            type="org.pmedv.actions.GImageAction"
+            validate="true" >
+
+            <forward
+                name="createGImageSuccess"
+                path="/admin/createGImageSuccess.jsp" />
+        </action>
+
+        <action
+            name="GImageShowForm"
+            parameter="do"
+            path="/admin/EditGImage"
+            scope="request"
+            type="org.pmedv.actions.GImageEditAction"
+            validate="false" >
+
+            <forward
+                name="showGImageDetails"
+                path="/admin/showGImageDetails.jsp" />
+        </action>
+
+        <action
+            name="DirectoryListForm"
+            attribute="DirectoryListForm"
+            input="/admin/showDirectoryList.jsp"
+            parameter="do"
+            path="/admin/ListDirectories"
+            scope="request"
+            type="org.pmedv.actions.DirectoryAction"
+            validate="false" >
+
+            <forward
+                name="showDirectoryList"
+                path="/admin/showDirectoryList.jsp" />
+
+            <forward
+                name="fileBrowser"
+                path="/admin/showFileBrowser.jsp" />
+        </action>
+
+        <action
+            name="ContentForm"
+            input="/admin/createContent.jsp"
+            path="/admin/CreateContent"
+            scope="request"
+            type="org.pmedv.actions.ContentAction"
+            validate="false" >
+
+            <forward
+                name="createContentSuccess"
+                path="/admin/createContentSuccess.jsp" />
+        </action>
+
+        <action
+            name="ContentListForm"
+            attribute="ContentListForm"
+            input="/admin/showContentList.jsp"
+            path="/admin/ListContents"
+            scope="request"
+            type="org.pmedv.actions.ContentListAction"
+            validate="false" >
+
+            <forward
+                name="showContentList"
+                path="/admin/showContentList.jsp" />
+        </action>
+
+        <action
+            name="ContentShowForm"
+            attribute="ContentShowForm"
+            input="/admin/showContentDetails.jsp"
+            parameter="do"
+            path="/admin/ShowContent"
+            scope="request"
+            type="org.pmedv.actions.ContentShowAction"
+            validate="false" >
+
+            <forward
+                name="showContentDetails"
+                path="/admin/showContentDetails.jsp" />
+
+            <forward
+                name="showContentEditor"
+                path="/admin/contentEditor.jsp" />
+
+            <forward
+                name="showSingleEditor"
+                path="/admin/tinyEditor.jsp" />
+
+            <forward
+                name="showContentEditorNew"
+                path="/admin/contentEditorNew.jsp" />
+
+            <forward
+                name="showContentPreview"
+                path="/admin/showContentPreview.jsp" />
+        </action>
+
+        <action
+            name="LoginForm"
+            attribute="LoginForm"
+            input="/admin/login.jsp"
+            parameter="do"
+            path="/admin/LoginDialog"
+            scope="request"
+            type="org.pmedv.actions.LoginAction"
+            validate="false" >
+
+            <forward
+                name="LoginDialog"
+                path="/admin/login.jsp" />
+        </action>
+
+        <action
+            name="LogoutForm"
+            attribute="LogoutForm"
+            input="/admin/index.jsp"
+            parameter="do"
+            path="/admin/Logout"
+            scope="request"
+            type="org.pmedv.actions.LogoutAction"
+            validate="false" >
+
+            <forward
+                name="Logout"
+                path="/admin/index.jsp" />
+        </action>
+
+        <!-- User Actions -->
+
+        <action
+            name="MainpageForm"
+            attribute="MainpageForm"
+            input="/main.jsp"
+            parameter="do"
+            path="/Mainpage"
+            scope="request"
+            type="org.pmedv.actions.MainpageShowAction"
+            validate="false" >
+
+            <forward
+                name="showMainpage"
+                path="/main.jsp" />
+        </action>
+
+        <action
+            name="SiteContactForm"
+            attribute="SiteContactForm"
+            input="/siteContact.jsp"
+            parameter="do"
+            path="/siteContact"
+            scope="request"
+            type="org.pmedv.actions.SiteContactAction"
+            validate="false" >
+
+            <forward
+                name="siteContact"
+                path="/siteContact.jsp" />
+        </action>
+
+        <action
+            name="GalleryForm"
+            parameter="do"
+            path="/admin/GalleryAction"
+            scope="request"
+            type="org.pmedv.actions.GalleryAction"
+            validate="false" >
+        </action>
+
+        <action
+            name="GalleryListForm"
+            attribute="GalleryListForm"
+            input="/admin/showGalleryList.jsp"
+            parameter="do"
+            path="/admin/ListGalleries"
+            scope="request"
+            type="org.pmedv.actions.GalleryListAction"
+            validate="false" >
+
+            <forward
+                name="showGalleryList"
+                path="/admin/showGalleryList.jsp" />
+        </action>
+
+        <action
+            name="GalleryShowForm"
+            attribute="GalleryShowForm"
+            input="/admin/showGalleryDetails.jsp"
+            parameter="do"
+            path="/admin/ShowGallery"
+            scope="request"
+            type="org.pmedv.actions.GalleryShowAction"
+            validate="false" >
+
+            <forward
+                name="showGalleryDetails"
+                path="/admin/showGalleryDetails.jsp" />
+        </action>
+
+        <action
+            name="FileForm"
+            attribute="FileForm"
+            input="/admin/showFileDetails.jsp"
+            parameter="do"
+            path="/admin/ShowFile"
+            scope="request"
+            type="org.pmedv.actions.FileShowAction"
+            validate="false" >
+
+            <forward
+                name="showFileDetails"
+                path="/admin/showFileDetails.jsp" />
+
+            <forward
+                name="showFileName"
+                path="/admin/showFileName.jsp" />
+        </action>
+
+        <action
+            name="UsergroupForm"
+            input="/admin/createUsergroup.jsp"
+            path="/admin/CreateUsergroup"
+            scope="request"
+            type="org.pmedv.actions.UsergroupAction"
+            validate="false" >
+
+            <forward
+                name="createUsergroupSuccess"
+                path="/admin/createUsergroupSuccess.jsp" />
+        </action>
+
+        <action
+            name="UsergroupListForm"
+            attribute="UsergroupListForm"
+            input="/admin/showUsergroupList.jsp"
+            parameter="do"
+            path="/admin/ListUsergroups"
+            scope="request"
+            type="org.pmedv.actions.UsergroupListAction"
+            validate="false" >
+
+            <forward
+                name="showUsergroupList"
+                path="/admin/showUsergroupList.jsp" />
+        </action>
+
+        <action
+            name="UsergroupShowForm"
+            attribute="UsergroupShowForm"
+            input="/admin/showUsergroupDetails.jsp"
+            parameter="do"
+            path="/admin/ShowUsergroup"
+            scope="request"
+            type="org.pmedv.actions.UsergroupShowAction"
+            validate="false" >
+
+            <forward
+                name="showUsergroupDetails"
+                path="/admin/showUsergroupDetails.jsp" />
+        </action>
+
+        <action
+            name="UsergroupAddForm"
+            input="/admin/addUsergroup.jsp"
+            path="/admin/addUsergroup"
+            scope="request"
+            type="org.pmedv.actions.UsergroupAddAction"
+            validate="false" >
+
+            <forward
+                name="addUsergroup"
+                path="/admin/addUsergroup.jsp" />
+        </action>
+
+        <action
+            name="ProcessForm"
+            input="/admin/createProcess.jsp"
+            path="/admin/CreateProcess"
+            scope="request"
+            type="org.pmedv.actions.ProcessAction"
+            validate="true" >
+
+            <forward
+                name="createProcessSuccess"
+                path="/admin/createProcessSuccess.jsp" />
+        </action>
+
+        <action
+            name="ProcessListForm"
+            attribute="ProcessListForm"
+            input="/admin/showProcessList.jsp"
+            parameter="do"
+            path="/admin/ListProcesses"
+            scope="request"
+            type="org.pmedv.actions.ProcessListAction"
+            validate="false" >
+
+            <forward
+                name="showProcessList"
+                path="/admin/processBrowser.jsp" />
+        </action>
+
+        <action
+            name="ProcessShowForm"
+            attribute="ProcessShowForm"
+            input="/admin/showProcessDetails.jsp"
+            parameter="do"
+            path="/admin/ShowProcess"
+            scope="request"
+            type="org.pmedv.actions.ProcessShowAction"
+            validate="false" >
+
+            <forward
+                name="showProcessDetails"
+                path="/admin/showProcessDetails.jsp" />
+        </action>
+
+        <action
+            name="ProcessgroupAddForm"
+            input="/admin/addProcessgroup.jsp"
+            path="/admin/addProcessgroup"
+            scope="request"
+            type="org.pmedv.actions.ProcessgroupAddAction"
+            validate="false" >
+
+            <forward
+                name="addProcessgroup"
+                path="/admin/addProcessgroup.jsp" />
+        </action>
+
+        <action
+            name="NodegroupAddForm"
+            input="/admin/addNodegroup.jsp"
+            path="/admin/addNodegroup"
+            scope="request"
+            type="org.pmedv.actions.NodegroupAddAction"
+            validate="false" >
+
+            <forward
+                name="addNodegroup"
+                path="/admin/addNodegroup.jsp" />
+        </action>
+
+        <action
+            name="AvatarForm"
+            input="/admin/addAvatar.jsp"
+            path="/admin/CreateAvatar"
+            scope="request"
+            type="org.pmedv.actions.AvatarAction"
+            validate="true" >
+
+            <forward
+                name="addAvatar"
+                path="/admin/addAvatar.jsp" />
+        </action>
+
+        <action
+            name="PluginListForm"
+            attribute="PluginListForm"
+            input="/admin/pluginBrowser.jsp"
+            parameter="do"
+            path="/admin/ListPlugins"
+            scope="request"
+            type="org.pmedv.actions.PluginListAction"
+            validate="false" >
+
+            <forward
+                name="showPluginList"
+                path="/admin/pluginBrowser.jsp" />
+        </action>
+
+        <action
+            name="DownloadShowForm" 
+            attribute="DownloadShowForm"
+            input="/admin/downloadBrowser.jsp"
+            parameter="do"
+            path="/admin/DownloadAdminAction"
+            scope="request"
+            type="org.pmedv.actions.DownloadAdminAction"
+            validate="false" >
+
+            <forward
+                name="showDownloadList"
+                path="/admin/downloadBrowser.jsp" />
+        </action>
+
+        <action
+            parameter="do"
+            path="/UserDownloadAction"
+            scope="request"
+            type="org.pmedv.actions.UserDownloadAction"
+            validate="false" >
+        </action>
+        
+        <action
+            className="org.pmedv.actions.FileDownloadActionMapping"
+            path="/admin/fileDownload"
+            type="org.pmedv.actions.FileDownloadAction" >
+        </action>
+
+        <action
+            className="org.pmedv.actions.FileDownloadActionMapping"
+            path="/fileDownload"
+            type="org.pmedv.actions.FileDownloadAction" >
+        </action>
+
+        <action
+            name="DownloadForm"
+            input="/admin/createDownload.jsp"
+            path="/admin/CreateDownload"
+            scope="request"
+            type="org.pmedv.actions.DownloadAddAction"
+            validate="true" >
+
+            <forward
+                name="createDownloadSuccess"
+                path="/admin/createDownloadSuccess.jsp" />
+        </action>
+
+        <action
+            name="DownloadListForm"
+            attribute="DownloadListForm"
+            input="/admin/showDownloadList.jsp"
+            path="/admin/ListDownloads"
+            scope="request"
+            type="org.pmedv.actions.DownloadListAction"
+            validate="false" >
+
+            <forward
+                name="showDownloadList"
+                path="/admin/showDownloadList.jsp" />
+        </action>
+
+        <action
+            name="DownloadShowForm"
+            attribute="DownloadShowForm"
+            input="/admin/showDownloadDetails.jsp"
+            parameter="do"
+            path="/admin/ShowDownload"
+            scope="request"
+            type="org.pmedv.actions.DownloadShowAction"
+            validate="false" >
+
+            <forward
+                name="showDownloadDetails"
+                path="/admin/showDownloadDetails.jsp" />
+        </action>
+
+        <action
+            name="RegistrationForm"
+            attribute="RegistrationForm"
+            input="/registration.jsp"
+            parameter="do"
+            path="/Registration"
+            scope="request"
+            type="org.pmedv.actions.RegistrationAction"
+            validate="false" >
+
+            <forward
+                name="showRegistrationDialog"
+                path="registration.jsp" />
+        </action>
+
+        <action
+            name="TreeForm"
+            attribute="TreeForm"
+            parameter="do"
+            path="/admin/Tree"
+            scope="request"
+            type="org.pmedv.actions.TreeAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/ContentBuilder"
+            scope="request"
+            type="org.pmedv.actions.ContentBuilderAction" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/admin/JobAction"
+            scope="request"
+            type="org.pmedv.actions.JobAction" >
+
+            <forward
+                name="jobBrowser"
+                path="/admin/jobBrowser.jsp" />
+        </action>
+
+        <action
+            forward="content.mainpage"
+            path="/content/mainpage" />
+
+        <action
+            name="ForumMainpageForm"
+            attribute="ForumMainpageForm"
+            parameter="do"
+            path="/forum/Mainpage"
+            scope="request"
+            type="org.pmedv.actions.forums.ForumMainpageAction"
+            validate="false" >
+
+            <forward
+                name="showForums"
+                path="/forum/showForums.jsp" />
+
+            <forward
+                name="showCategory"
+                path="/forum/showCategory.jsp" />
+
+            <forward
+                name="showThread"
+                path="/forum/showThread.jsp" />
+
+            <forward
+                name="showUnreadThreads"
+                path="/forum/unreadThreads.jsp" />
+
+            <forward
+                name="editPosting"
+                path="/forum/editPosting.jsp" />
+
+            <forward
+                name="memberList"
+                path="/forum/memberList.jsp" />
+
+            <forward
+                name="missingLogin"
+                path="/forum/missingLogin.jsp" />
+        </action>
+
+        <action
+            name="ThreadForm"
+            input="/forum/createThread.jsp"
+            path="/forum/CreateThread"
+            scope="request"
+            type="org.pmedv.actions.forums.ThreadAction"
+            validate="true" >
+        </action>
+
+        <action
+            name="PostingForm"
+            input="/forum/createPosting.jsp"
+            path="/forum/CreatePosting"
+            scope="request"
+            type="org.pmedv.actions.forums.PostingAction"
+            validate="true" >
+        </action>
+
+        <action
+            name="UserProfileForm"
+            attribute="UserProfileForm"
+            parameter="do"
+            path="/users/UserAction"
+            scope="request"
+            type="org.pmedv.actions.userpages.UserProfileAction"
+            validate="false" >
+
+            <forward
+                name="userProfile"
+                path="/users/userProfile.jsp" />
+
+            <forward
+                name="editProfile"
+                path="/users/userProfile.jsp" />
+
+            <forward
+                name="showGalleries"
+                path="/users/userGalleries.jsp" />
+
+            <forward
+                name="addAvatar"
+                path="/users/addAvatar.jsp" />
+        </action>
+
+        <action
+            name="UserCommentForm"
+            attribute="UserCommentForm"
+            parameter="do"
+            path="/users/UserComment"
+            scope="request"
+            type="org.pmedv.actions.userpages.UserCommentAction"
+            validate="false" >
+        </action>
+
+        <action
+            name="GalleryForm"
+            attribute="GalleryForm"
+            parameter="do"
+            path="/users/GalleryAction"
+            scope="request"
+            type="org.pmedv.actions.userpages.UserGalleryAction"
+            validate="false" >
+
+            <forward
+                name="showGalleries"
+                path="/users/userGalleries.jsp" />
+
+            <forward
+                name="createGallery"
+                path="/users/addGallery.jsp" />
+
+            <forward
+                name="editGallery"
+                path="/users/editGallery.jsp" />
+
+            <forward
+                name="addImage"
+                path="/users/addImage.jsp" />
+
+            <forward
+                name="showGallery"
+                path="/users/userGallery.jsp" />
+        </action>
+
+        <action
+            name="UserMailboxForm"
+            attribute="UserMailboxForm"
+            parameter="do"
+            path="/users/MailboxAction"
+            scope="request"
+            type="org.pmedv.actions.userpages.UserMailboxAction"
+            validate="false" >
+
+            <forward
+                name="showUserMailbox"
+                path="/users/userMailbox.jsp" />
+        </action>
+
+        <action
+            parameter="do"
+            path="/users/ChatAction"
+            scope="request"
+            type="org.pmedv.actions.ChatAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/CountryAction"
+            scope="request"
+            type="org.pmedv.actions.CountryAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/LocaleAction"
+            scope="request"
+            type="org.pmedv.actions.LocaleAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/CalendarAction"
+            scope="request"
+            type="org.pmedv.actions.calendar.CalendarAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/EventAction"
+            scope="request"
+            type="org.pmedv.actions.calendar.EventAction"
+            validate="false" >
+
+            <forward
+                name="viewEvent"
+                path="/calendar/viewEvent.jsp" />
+        </action>
+
+        <action
+            parameter="do"
+            path="/IOFileAction"
+            scope="request"
+            type="org.pmedv.actions.groupware.IOFileAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/admin/AdminAction"
+            scope="request"
+            type="org.pmedv.actions.AdminAction"
+            validate="false" >
+        </action>
+
+        <action
+            name="DoctorForm"
+            attribute="DoctorForm"
+            input="/admin/showDoctorList.jsp"
+            parameter="do"
+            path="/admin/DoctorAction"
+            scope="request"
+            type="org.pmedv.actions.DoctorAction"
+            validate="false" >
+
+            <forward
+                name="showDoctorList"
+                path="/admin/showDoctorList.jsp" />
+        </action>
+
+        <action
+            name="ForumShowForm"
+            attribute="ForumShowForm"
+            parameter="do"
+            path="/admin/ForumShowAction"
+            scope="request"
+            type="org.pmedv.actions.forums.ForumShowAction"
+            validate="false" >
+
+            <forward
+                name="showForumsList"
+                path="/admin/showForumsList.jsp" />
+        </action>
+
+        <action
+            parameter="do"
+            path="/FaqAction"
+            scope="request"
+            type="org.pmedv.actions.faq.FaqAction"
+            validate="false" >
+        </action>
+
+        <action
+            parameter="do"
+            path="/DownloadAction"
+            scope="request"
+            type="org.pmedv.actions.DownloadAction" >
+        </action>
+    </action-mappings>
+
+    <controller
+        maxFileSize="16M"
+        processorClass="org.pmedv.cms.CMSRequestProcessor" >
+    </controller>
+
+    <message-resources parameter="MessageResources" />
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
+
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+    </plug-in>
+
+    <!--
+	<plug-in className="org.pmedv.util.HibernatePlugIn">
+		<set-property property="configFilePath" value="/hibernate.cfg.xml" />
+		<set-property property="storeInServletContext" value="true" />
+	</plug-in>
+    -->
+
+
+    <!--
+    Sample for a struts plugin 
+    <plug-in className="org.pmedv.util.SampleStrutsPlugin">
+        <set-property property="sampleValue" value="blah" />
+    </plug-in>
+    -->
+
+</struts-config>

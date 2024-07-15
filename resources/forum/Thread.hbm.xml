@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.forums.Thread" table="THREAD">
+		
+		<id name="id" column="THREAD_ID">
+                <generator class="increment"/>
+        </id>
+			
+		<property name="name" column="NAME"/>	
+		<property name="date" type="timestamp" column="THREAD_DATE" />
+		<property name="lastPost" type="timestamp" column="LASTPOST" />
+		
+		<many-to-one name="category" column="CATEGORY_ID" not-null="true"/>		
+		<many-to-one name="user"   column="USER_ID" not-null="true" lazy="false"/>	
+				
+		<set name="postings"
+			 lazy="false" 
+			 inverse="true" 
+			 sort="natural" 
+			 cascade="all-delete-orphan">		
+            <key column="THREAD_ID"/>
+            <one-to-many class="org.pmedv.pojos.forums.Posting"/>
+        </set>					
+		 	      							
+	</class>
+	
+</hibernate-mapping>

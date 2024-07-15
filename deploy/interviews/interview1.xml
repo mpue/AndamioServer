@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<interview>
+	<name>Some stupid interview</name>
+    <questions>
+    	<name>whatDoYouLike</name>
+        <text>What do you like?</text>
+        <type>RADIO_CHOICE</type>
+        <answers>
+            <text>Beer</text>
+            <name>beer</name>
+        </answers>
+        <answers>
+            <text>Cola</text>
+            <name>cola</name>
+        </answers>
+        <answers>
+            <text>Water</text>
+            <name>water</name>
+        </answers>
+    </questions>
+    <questions>
+	    <name>whatAreYourHobbies</name>	
+        <text>What are your hobbies?</text>
+        <type>CHECKBOX</type>
+        <answers>
+            <text>Skating</text>
+            <name>skating</name>
+        </answers>
+        <answers>
+            <text>Diving</text>
+            <name>diving</name>
+        </answers>
+        <answers>
+            <text>Programming</text>
+            <name>programming</name>
+        </answers>
+    </questions>
+   <questions>
+		<name>whereIsYourDog</name>	
+        <text>Where is your dog?</text>
+        <type>RADIO_CHOICE</type>
+        <answers>
+            <text>Dead</text>
+            <name>dead</name>
+        </answers>
+        <answers>
+            <text>I have no dog</text>
+            <name>nodog</name>
+        </answers>
+        <answers>
+            <text>In the fridge</text>
+            <name>fridge</name>
+        </answers>
+        <answers>
+            <text>Still cooking</text>
+            <name>cooking</name>
+        </answers>        
+    </questions>
+    <questions>
+		<name>describeYourself</name>	
+        <text>Describe yourself in a few sentences</text>
+        <type>TEXT</type>
+    </questions>
+</interview>

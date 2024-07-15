@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="first"
+          margin-right="1.5cm"
+          margin-left="1.5cm"
+          margin-bottom="2cm"
+          margin-top="1cm"
+          page-width="29.7cm"
+          page-height="21.0cm">
+      <fo:region-body margin-top="1cm"/>
+      <fo:region-before extent="1cm"/>
+      <fo:region-after extent="1.5cm"/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+
+  <fo:page-sequence master-reference="first">
+    <fo:static-content flow-name="xsl-region-before">
+      <fo:block line-height="14pt" font-size="10pt" text-align="end">AVANTI CSI</fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="xsl-region-after">
+      <fo:block line-height="14pt" font-size="10pt" text-align="end">Seite <fo:page-number/></fo:block>
+    </fo:static-content>
+
+    <fo:flow flow-name="xsl-region-body">
+
+
+  <fo:block space-before.optimum="30pt" space-after.optimum="15pt" font-size="18pt">
+  		Einzelpatienten - Listing
+  </fo:block>
+
+    <fo:table border-collapse="collapse" table-layout="fixed">
+    
+    <fo:table-column column-width="3cm"/>
+    <fo:table-column column-width="3cm"/>
+    <fo:table-column column-width="3cm"/>
+    <fo:table-column column-width="3cm"/>
+    <fo:table-column column-width="5cm"/>
+    <fo:table-column column-width="9cm"/>
+
+    <fo:table-body>
+    
+      <fo:table-row background-color="#DDDDDD">
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Zyklus / 
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	1.Gabe
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	2.Gabe
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	3.Gabe
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Kombinationspartner
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Therapieunterbrechungen
+	      </fo:block>
+	    </fo:table-cell>
+
+	  </fo:table-row>
+	  
+	  <fo:table-row background-color="#DDDDDD" border-bottom-width="1.5pt" border-bottom-style="solid">
+	  
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Startdatum 
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Dosis
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Dosis
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Dosis
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Dosis
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="none">
+	      <fo:block text-align="left">
+	      	Dosisreduktionen Gründe
+	      </fo:block>
+	    </fo:table-cell>
+
+	  </fo:table-row>
+	  
+	  
+	  <fo:table-row background-color="#EEEEEE">
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>	    
+	  </fo:table-row>
+	  
+	  <fo:table-row>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>	    
+	  </fo:table-row>
+	  
+	  <fo:table-row background-color="#EEEEEE">
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-color="black" border-width="0.5pt" border-style="solid">
+	      <fo:block text-align="left">
+	      	Text
+	      </fo:block>
+	    </fo:table-cell>	    
+	  </fo:table-row>
+	  	  
+	  
+	</fo:table-body>
+    </fo:table>
+
+      
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

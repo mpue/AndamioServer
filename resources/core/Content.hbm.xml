@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="org.pmedv.pojos.Content" table="CONTENT">
+		
+		<id name="id" column="CONTENT_ID" >
+			<generator class="increment" />
+		</id>
+		
+		<property name="description"   	 column="DESCRIPTION" />
+		<property name="contentname"   	 column="CONTENTNAME" />
+		<property name="pagename"   	 column="PAGENAME" />
+		<property name="metatags"        column="METATAGS" type="text" length="2147483647" />
+		<property name="contentstring" 	 column="CONTENTSTRING" type="text" length="2147483647" />
+		<property name="created" type="timestamp" column="CREATED" />
+		<property name="lastmodified" type="timestamp" column="LASTMODIFIED" />				
+		<property name="lastmodifiedby" column="LASTMODIFIEDBY" />
+		<property name="commentsAllowed" column="COMMENTSALLOWED" />
+		
+		<!-- <property name="created"      type="timestamp" column="CREATED" /> -->
+		
+		<set name="nodes" lazy="false">
+           <key column="INHALT_ID"/>
+           <one-to-many class="org.pmedv.pojos.Node"/>
+      	</set> 
+      	
+		<set name="userComments"
+			 lazy="false" 
+			 inverse="false" 
+			 sort="org.pmedv.comparator.CommentComparator"
+			 cascade="all-delete-orphan">		
+            <key column="CONTENT_ID"/>
+            <one-to-many class="org.pmedv.pojos.UserComment"/>
+        </set>      	
+      	
+      	<!-- 
+      	<set name="revisions"
+			 lazy="false" 
+			 inverse="true" 
+			 cascade="all-delete-orphan">		
+            <key column="REVISION_ID"/>
+            <one-to-many class="org.pmedv.pojos.Revision"/>
+        </set>
+      	
+      	<one-to-one name="currentrevision" class="org.pmedv.pojos.Revision" lazy="false" />
+		 -->
+	</class>
+	
+</hibernate-mapping>

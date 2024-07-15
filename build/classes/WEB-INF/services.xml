@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:amq="http://activemq.apache.org/schema/core"	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"		
+  	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd
+              http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd	">  
+
+	<bean id="galleryService" class="org.pmedv.services.GalleryServiceImpl">
+	</bean>
+    <bean id="templateService" class="org.pmedv.services.TemplateServiceImpl">
+    </bean>	
+    <bean id="authenticationService" class="org.pmedv.services.AuthenticationServiceImpl">
+    </bean>
+	<bean id="nodeService" class="org.pmedv.services.NodeServiceImpl">
+	</bean>
+	<bean id="configService" class="org.pmedv.services.ConfigServiceImpl">
+	</bean>
+	<bean id="fileService" class="org.pmedv.services.FileServiceImpl">
+	</bean>
+	<bean id="biblioService" class="org.pmedv.services.BiblioServiceImpl">
+	</bean>
+	<bean id="attributeService" class="org.pmedv.services.AttributeServiceImpl">
+	</bean>
+	<bean id="userService" class="org.pmedv.services.UserServiceImpl">
+	</bean>
+	<bean id="usergroupService" class="org.pmedv.services.UsergroupServiceImpl">
+	</bean>
+	<bean id="userMailService" class="org.pmedv.services.UserMailServiceImpl">
+	</bean>
+	<bean id="pluginService" class="org.pmedv.services.PluginServiceImpl">
+	</bean>
+	<bean id="contactService" class="org.pmedv.services.ContactServiceImpl">
+	</bean>
+	<bean id="countryService" class="org.pmedv.services.CountryServiceImpl">
+	</bean>
+	<bean id="calendarService" class="org.pmedv.services.CalendarServiceImpl">
+	</bean>    
+    
+    <!-- remote services with RMI -->
+
+	<!--
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="GalleryService" />
+        <property name="service" ref="galleryService" />
+        <property name="serviceInterface" value="org.pmedv.services.GalleryService"/>
+        <property name="registryPort" value="1199" />
+    </bean>	
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="TemplateService" />
+        <property name="service" ref="templateService" />
+        <property name="serviceInterface" value="org.pmedv.services.TemplateService"/>
+        <property name="registryPort" value="1199" />
+    </bean> 
+    
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="AuthenticationService" />
+        <property name="service" ref="authenticationService" />
+        <property name="serviceInterface" value="org.pmedv.services.AuthenticationService"/>
+        <property name="registryPort" value="1199" />
+    </bean> 
+
+    -->
+    
+    <!-- Service exports for the servlets defined in WEB-INF/web.xml -->
+    
+    <bean name="authenticationExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="authenticationService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.AuthenticationService"/>
+	</bean>
+
+    <bean name="galleryServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="galleryService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.GalleryService"/>
+	</bean>
+
+    <bean name="templateServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="templateService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.TemplateService"/>
+	</bean>
+
+    <bean name="nodeServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="nodeService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.NodeService"/>
+	</bean>
+
+    <bean name="configServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="configService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.ConfigService"/>
+	</bean>
+
+    <bean name="fileServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="fileService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.FileService"/>
+	</bean>
+
+    <bean name="biblioServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="biblioService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.BiblioService"/>
+	</bean>
+
+    <bean name="attributeServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="attributeService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.AttributeService"/>
+	</bean>
+
+    <bean name="userServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="userService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.UserService"/>
+	</bean>
+
+    <bean name="usergroupServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="usergroupService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.RemoteAccessService"/>
+	</bean>
+	
+	<bean name="pluginServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="pluginService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.PluginService"/>
+	</bean>
+	
+	<bean name="contactServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="contactService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.ContactService"/>
+	</bean>
+	
+	<bean name="countryServiceExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    	<property name="service" ref="countryService"/>
+    	<property name="serviceInterface" value="org.pmedv.services.RemoteAccessService"/>
+	</bean>
+	
+	<bean id="cmsUserDetailsService" class="org.pmedv.authentication.CMSUserDetailsService"/>
+	
+</beans>	

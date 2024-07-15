@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<attributeList>
+	<attribute>
+		<id>1</id>
+		<key>key.gender</key>
+		<value></value>
+		<description>The gender of the user</description>
+		<dataType>STRING</dataType>
+	</attribute>
+	<attribute>
+		<id>2</id>
+		<key>key.age</key>
+		<value></value>
+		<description>The age of the user</description>
+		<dataType>INTEGER</dataType>
+	</attribute>
+	<attribute>
+		<id>3</id>
+		<key>key.hobbies</key>
+		<value></value>
+		<description>The hobbies of the user</description>
+		<dataType>STRING</dataType>
+	</attribute>
+	
+</attributeList>
